@@ -1,0 +1,114 @@
+<div class="page-inner">
+	<aside>
+		<div class="input-group mb-3 mt-3">
+			<input
+				type="text"
+				class="gold-text"
+				[(ngModel)]="SearchText"
+				placeholder="Search"
+				aria-label="Search"
+				aria-describedby="basic-addon1"
+				(input)="Search()" />
+			<i class="fa fa-search input-group-text gold-text" id="basic-addon1"></i>
+		</div>
+
+		<div *ngFor="let category of Categories;let i = index">
+			<ul class="list-unstyled m-0 ps-0">
+				<li class="category">
+					<button
+						class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed gold-text"
+						data-bs-toggle="collapse"
+						[attr.data-bs-target]="'#' + category.Name.replace(regex,'').trim() + '-collapse'"
+						aria-expanded="false">
+						<img src="assets/Logos/arrowExpand.png" />
+						{{category.Name}}
+					</button>
+					<div class="collapse project-list" [attr.id]="category.Name.replace(regex,'').trim() 	+ '-collapse'">
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" *ngFor="let project of category.ProjectItem;let i = index">
+							<!-- <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li> -->
+							<li>
+								<a
+									(click)="attachClickEventListeners(category.Name.replace(regex,'').trim().toLocaleUpperCase(), project.Name.replace(regex,'').trim().toLocaleUpperCase())"
+									href="javascript:void(0)"
+									class="active gold-text nav-link px-0"
+									id="categories"
+									[attr.data-category]="category.Name.replace(regex,'').trim().toLocaleUpperCase()+'-'+project.Name.replace(regex,'').trim().toLocaleUpperCase()">
+									{{project.Name}}
+									<span>
+										<i class="fa fa-thumb-tack"></i>
+										{{project.Location}}
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<ul class="list-unstyled m-0 ps-0">
+				<li class="category more-projects">
+					<button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed gold-text" aria-expanded="false">
+						<img src="assets/Logos/arrowExpand.png" />
+						<a href="javascript:void(0)" class="gold-text active MOREPROJECTS" (click)="GotoMoreProjects()">
+							<!-- <i class="fa fa-map-marker"></i> -->
+							More Projects...
+						</a>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</aside>
+	<div class="page-section art-div">
+		<div
+			class="category"
+			*ngFor="let category of Categories;let i = index"
+			[id]="category.Name.replace(regex, '').trim().toLocaleUpperCase()"
+			[ngClass]="category.Name.replace(regex, '').trim().toLocaleUpperCase()">
+			<div *ngFor="let project of category.ProjectItem; let i = index" class="projects" [id]="project.Name.replace(regex, '').trim().toLocaleUpperCase()">
+				<h1 class="title gold-text">{{project.Name}}</h1>
+				<p class="sub-title">{{project.Description}}</p>
+				<div class="images">
+					<ng-container *ngFor="let img of project.Images; let j = index">
+						<div class="hoverable-img-item">
+							<img class="img" [src]="img" alt="" data-bs-toggle="modal" [attr.data-bs-target]="'#project-' + i + '-' + j" />
+						</div>
+						<!-- Modal -->
+						<div class="modal fade" [id]="'project-' + i + '-' + j" tabindex="-1" aria-labelledby="projectLabel">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content" (click)="$event.stopPropagation()">
+									<div class="modal-header">
+										<h1 class="modal-title fs-5" id="projectLabel">{{project.Name}}</h1>
+										<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img class="img-modal" [src]="img" alt="" />
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</ng-container>
+				</div>
+			</div>
+		</div>
+
+		<div class="category more-projects MOREPROJECTS">
+			<h1 class="title gold-text">More Projects</h1>
+			<p class="sub-title">For More Projects By Amr Diwan</p>
+			<div class="images" [id]="'MOREPROJECTS'">
+				<a
+					*ngFor="let project of MoreProjects; let i = index"
+					class="hoverable-img-item"
+					[href]="AppConfig.env.AmrDiwanUrl + project.Link"
+					target="_blank">
+					<img class="img" [src]="project.Images[0]" alt="project display image" />
+					<div class="visible">{{project.Name}}</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

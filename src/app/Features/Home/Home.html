@@ -1,0 +1,116 @@
+<div class="page-inner">
+	<!-- <section class="page-section landing p-0">
+		<div class="landing-overlay">
+			<img src="assets/Images/landing/break-the-rules.png" alt="landing image" />
+		</div>
+		<div class="landing-imgs">
+			<img src="assets/Images/landing/1.webp" />
+			<img src="assets/Images/landing/2.webp" />
+			<img src="assets/Images/landing/3.webp" />
+			<img src="assets/Images/landing/4.webp" />
+			<img src="assets/Images/landing/5.webp" />
+			<img src="assets/Images/landing/6.webp" />
+			<img src="assets/Images/landing/7.webp" />
+		</div>
+		<div class="scroll-down">
+			<div class="arrow1"></div>
+			<div class="arrow2"></div>
+		</div>
+	</section> -->
+
+	<section class="page-section landing2 p-0">
+		<app-LandingCarousel></app-LandingCarousel>
+	</section>
+
+	<!-- <div class="page-container"> -->
+	<section class="page-section no-min about lateral-padding">
+		<div class="sub-title">
+			<h3>Who we are</h3>
+			<h4 class="gold-text">Break the rules.</h4>
+			<p class="text-start">
+				<strong>Diwan studios</strong> combines the concepts of <strong>graffiti</strong> and <strong>architecture</strong> design elements. <br />
+				<small>we guarantee high quality personalized designs that will bring your brand to life.</small>
+			</p>
+		</div>
+		<div class="tab-content">
+			<div class="stat-list">
+				<div *ngFor="let stat of Stats; let i = index" class="stat" [ngClass]="{'stat-clickable': stat.Link}" (click)="GotoStat(stat.Link)">
+					<div
+						class="number"
+						[ngClass]="{'bg': i != 4,'meters': i == 3 }"
+						[id]="i"
+						[attr.number]="stat.Number"
+						[attr.timeinterval]="stat.TimeInterval"></div>
+					<div class="text text{{i}}">
+						<div class="stat-title">{{ stat.Title }}</div>
+						<div class="description">{{ stat.Description }}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-section no-min values">
+		<div class="tab-content">
+			<div class="partition image line-image">
+				<img src="assets/Images/diwan-handbook/our-values-home.png" />
+			</div>
+			<div class="list">
+				<div *ngFor="let Value of Values;" class="value">
+					<div class="title" [innerHTML]="Value.Title"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-section no-min categories">
+		<div class="containerr">
+			<div class="right-section">
+				<div class="contentt">
+					<div class="category" *ngFor="let category of Categories; index as i">
+						<img [src]="category.ImgSrc" [alt]="category.ImgAlt" class="img" />
+						<div class="category-description">
+							<h1>{{category.Title}}</h1>
+							<!-- <h5>{{category.Description}}</h5> -->
+							<a class="btn btn-primary" [routerLink]="'/'+ RoutePaths.ArtWorks + '/' + category.Link">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="left-section">
+				<div class="contentt">
+					<div class="own-description">
+						<!-- Content for left section -->
+						<h1 class="gold-text">Our Projects</h1>
+						<h4>Categories</h4>
+						<p>
+							When it comes to "wall art" Diwan Studio takes graffiti to a whole different level. There's more to it than just spray painting to a
+							wall, it's a documentation of culture and history that together represent individuality and personality.
+							<!-- <a class="" [routerLink]="'/'+ RoutePaths.About">Portfolio</a> -->
+						</p>
+
+						<!-- <p *ngFor="let category of Categories; index as i" class="own-description" [ngClass]="{'current typing-effect': i==CurrentCategoryIndex}">
+						{{category.OwnDescription}}
+					</p> -->
+						<!-- <p class="own-description">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam vel a beatae voluptatem fugit eveniet dicta, amet eaque! Deleniti
+						ducimus iure quisquam porro atque quis quas officiis, minima accusantium vel dolore quibusdam sequi placeat culpa dicta vero velit ex
+						perspiciatis voluptatum eius hic cum repellendus! Iste sunt quo ea excepturi?
+					</p> -->
+						<!-- <a class="" href="assets/PDF/brandbook diwan studios.pdf" target="_blank">Check all projects' portfolio</a> -->
+						<a class="" [href]="PortfolioLink" target="_blank">Check all projects' portfolio</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-section no-min partners">
+		<h1 class="gold-text">Clients</h1>
+		<div class="tab-content">
+			<app-Carousel [Images]="PartnersImages"></app-Carousel>
+		</div>
+	</section>
+</div>
+<!-- </div> -->

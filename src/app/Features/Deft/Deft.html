@@ -1,0 +1,45 @@
+<div class="page-inner">
+	<aside>
+		<ul class="list-unstyled m-0 ps-0">
+			<li class="category" *ngFor="let project of Projects;">
+				<button
+					class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed gold-text"
+					(click)="attachClickEventListeners(project.Name.replace(' ','').trim().toLocaleUpperCase())"
+					[attr.data-category]="project.Name.replace(' ','').trim().toLocaleUpperCase()">
+					<img src="assets/Logos/arrowExpand.png" />
+					{{project.Name}}
+				</button>
+			</li>
+		</ul>
+	</aside>
+
+	<div class="page-section art-div">
+		<div class="category more-projects" *ngFor="let project of Projects; let i = index" [id]="project.Name.replace(' ','').trim().toLocaleUpperCase()">
+			<h1 class="title gold-text">{{project.Name.replace(' ','').trim().toLocaleUpperCase()}}</h1>
+			<div class="images">
+				<ng-container *ngFor="let img of project.Images; let j = index">
+					<div class="hoverable-img-item">
+						<img class="img" [src]="img" alt="" data-bs-toggle="modal" [attr.data-bs-target]="'#project-' + i + '-' + j" />
+					</div>
+					<!-- Modal -->
+					<div class="modal fade" [id]="'project-' + i + '-' + j" tabindex="-1" aria-labelledby="projectLabel">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content" (click)="$event.stopPropagation()">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="projectLabel">{{project.Name}}</h1>
+									<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<img class="img-modal" [src]="img" alt="" />
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ng-container>
+			</div>
+		</div>
+	</div>
+</div>

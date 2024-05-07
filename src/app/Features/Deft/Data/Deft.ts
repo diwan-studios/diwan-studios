@@ -1,0 +1,113 @@
+
+
+export class DeftProjectItem {
+    Name!: string;
+    Description!: string;
+    Images!: string[];
+    Location!: string;
+    CategoryName!: string;
+}
+
+export const DeftProjects: DeftProjectItem[] = [
+    {
+        Name: 'PAINTINGS',
+        Description: '',
+        Images: ['assets/Images/Deft/Painting/painting1.webp',
+            'assets/Images/Deft/Painting/painting2.webp',
+            'assets/Images/Deft/Painting/painting3.webp',
+            'assets/Images/Deft/Painting/painting4.webp',
+            'assets/Images/Deft/Painting/painting5.webp',
+            'assets/Images/Deft/Painting/painting6.webp',
+            'assets/Images/Deft/Painting/painting7.webp',
+            'assets/Images/Deft/Painting/painting8.webp',
+            'assets/Images/Deft/Painting/painting9.webp',
+            'assets/Images/Deft/Painting/painting10.webp',
+            'assets/Images/Deft/Painting/painting11.webp',
+            'assets/Images/Deft/Painting/painting12.webp',
+            'assets/Images/Deft/Painting/painting13.webp',
+            'assets/Images/Deft/Painting/painting14.webp',
+            'assets/Images/Deft/Painting/painting15.webp',
+            'assets/Images/Deft/Painting/painting16.webp',
+            'assets/Images/Deft/Painting/painting17.webp',
+            'assets/Images/Deft/Painting/painting18.webp',
+            'assets/Images/Deft/Painting/painting19.webp',
+            'assets/Images/Deft/Painting/painting20.webp',
+            'assets/Images/Deft/Painting/painting21.webp',
+            'assets/Images/Deft/Painting/painting22.webp',
+            'assets/Images/Deft/Painting/painting23.webp',
+            'assets/Images/Deft/Painting/painting24.webp',
+            'assets/Images/Deft/Painting/painting25.webp',
+            'assets/Images/Deft/Painting/painting26.webp',
+            'assets/Images/Deft/Painting/painting27.webp',
+            'assets/Images/Deft/Painting/painting28.webp',
+            'assets/Images/Deft/Painting/painting29.webp',
+            'assets/Images/Deft/Painting/painting30.webp',
+            'assets/Images/Deft/Painting/painting31.webp',
+            'assets/Images/Deft/Painting/painting32.webp',
+            'assets/Images/Deft/Painting/painting33.webp',
+            'assets/Images/Deft/Painting/painting34.webp',
+            'assets/Images/Deft/Painting/painting35.webp',
+            'assets/Images/Deft/Painting/painting36.webp',
+            'assets/Images/Deft/Painting/painting37.webp',
+            'assets/Images/Deft/Painting/painting38.webp',
+            'assets/Images/Deft/Painting/painting39.webp',
+            'assets/Images/Deft/Painting/painting40.webp',
+            'assets/Images/Deft/Painting/painting41.webp',
+            'assets/Images/Deft/Painting/painting42.webp',
+            'assets/Images/Deft/Painting/painting43.webp',
+            'assets/Images/Deft/Painting/painting44.webp',
+            'assets/Images/Deft/Painting/painting45.webp',
+            'assets/Images/Deft/Painting/painting46.webp',
+            'assets/Images/Deft/Painting/painting47.webp',
+            'assets/Images/Deft/Painting/painting48.webp',
+            'assets/Images/Deft/Painting/painting49.webp',
+            'assets/Images/Deft/Painting/painting50.webp',
+            'assets/Images/Deft/Painting/painting51.webp',
+            'assets/Images/Deft/Painting/painting52.webp',
+            'assets/Images/Deft/Painting/painting53.webp',
+            'assets/Images/Deft/Painting/painting54.webp',
+            'assets/Images/Deft/Painting/painting55.webp',
+            'assets/Images/Deft/Painting/painting56.webp',
+            'assets/Images/Deft/Painting/painting57.webp',
+            'assets/Images/Deft/Painting/painting58.webp',
+            'assets/Images/Deft/Painting/painting59.webp',
+            'assets/Images/Deft/Painting/painting60.webp',
+            'assets/Images/Deft/Painting/painting61.webp',
+            'assets/Images/Deft/Painting/painting62.webp',
+            'assets/Images/Deft/Painting/painting63.webp',
+            'assets/Images/Deft/Painting/painting64.webp',
+            'assets/Images/Deft/Painting/painting65.webp',
+            'assets/Images/Deft/Painting/painting66.webp',
+            'assets/Images/Deft/Painting/painting67.webp',
+            'assets/Images/Deft/Painting/painting68.webp',
+            'assets/Images/Deft/Painting/painting69.webp',
+            'assets/Images/Deft/Painting/painting70.webp',
+            'assets/Images/Deft/Painting/painting71.webp',
+            'assets/Images/Deft/Painting/painting72.webp',],
+        Location: '',
+        CategoryName: 'Painting'
+    }
+    ,
+    {
+        Name: 'SCULPTURES',
+        Description: '',
+        Images: [
+            'assets/Images/Deft/Painting/painting66.webp',
+            'assets/Images/Deft/Painting/painting67.webp',
+            'assets/Images/Deft/Painting/painting68.webp',
+            'assets/Images/Deft/Painting/painting69.webp',
+            'assets/Images/Deft/Painting/painting70.webp',
+            'assets/Images/Deft/Painting/painting71.webp',
+            'assets/Images/Deft/Painting/painting66.webp',
+            'assets/Images/Deft/Painting/painting67.webp',
+            'assets/Images/Deft/Painting/painting68.webp',
+            'assets/Images/Deft/Painting/painting69.webp',
+            'assets/Images/Deft/Painting/painting70.webp',
+            'assets/Images/Deft/Painting/painting71.webp',
+        ],
+        Location: '',
+        CategoryName: 'SCULPTURES'
+    }
+];
+
+

@@ -1,0 +1,85 @@
+$partner-logo: 150px;
+$small-partner-logo: 75px;
+
+.carousel {
+	position: relative;
+	width: 100%;
+	padding: 0 50px;
+	.images-container {
+		display: flex;
+		justify-content: center;
+		.img-bg {
+			background-image: url('../../../../assets/Logos/logo-bg.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		img {
+			mix-blend-mode: multiply;
+			border-radius: 50%;
+
+			max-width: $partner-logo;
+			min-width: $partner-logo;
+			max-height: $partner-logo;
+			min-height: $partner-logo;
+			padding: 10px;
+			display: block; /* Ensure the image takes up its full container */
+			width: 100%; /* Adjust the width as needed */
+			height: auto; /* Maintain aspect ratio */
+			object-fit: contain;
+
+			// filter: grayscale(100%); /* Convert image to black and white */
+			transition: filter 0.3s ease;
+			cursor: pointer;
+			&:hover {
+				filter: grayscale(0%);
+			}
+		}
+	}
+
+	.images-container {
+		transition: opacity 0.5s ease; /* Add transition for fading effect */
+		opacity: 1; /* Ensure initial opacity is set to 1 */
+	}
+
+	.images-container.fade-out {
+		opacity: 0; /* Set opacity to 0 when fading out */
+	}
+
+	.prev-btn,
+	.next-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 10px;
+		border: none;
+		background-color: transparent;
+		font-size: 30px;
+		cursor: pointer;
+		color: var(--gold1);
+
+		&.grey {
+			cursor: auto;
+			color: grey;
+		}
+	}
+
+	.prev-btn {
+		left: 0;
+	}
+	.next-btn {
+		right: 0;
+	}
+}
+
+@media (max-width: 576px) {
+	.carousel {
+		.images-container {
+			img {
+				max-width: $small-partner-logo;
+				min-width: $small-partner-logo;
+				max-height: $small-partner-logo;
+				min-height: $small-partner-logo;
+			}
+		}
+	}
+}

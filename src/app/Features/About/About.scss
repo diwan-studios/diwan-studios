@@ -1,0 +1,207 @@
+$transition: all 0.6s ease-in;
+
+.page-inner {
+	.page-section {
+		padding-bottom: 50px;
+
+		img {
+			transition: 0.5s;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		.partition {
+			width: 100%;
+			text-align: center;
+		}
+
+		.bulk-image {
+			width: 40%;
+		}
+
+		.line-image {
+			width: 100%;
+			img {
+				max-height: 100px;
+			}
+		}
+
+		&.landing {
+			flex-direction: column;
+			justify-content: center;
+			gap: 50px;
+			.image {
+				opacity: 0;
+				transform: translateY(50px);
+				transition: $transition;
+
+				img {
+					max-height: 400px;
+				}
+
+				&.landing-img-transition {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+			}
+			.content {
+				padding: 0 20%;
+				opacity: 0;
+				transform: translateY(50px);
+				transition: $transition;
+
+				&.landing-text-transition {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+
+				h1 {
+					text-align: center;
+				}
+				h6 {
+					color: var(--secondary-font-color);
+				}
+			}
+		}
+
+		&.our-story {
+			align-items: flex-start;
+
+			opacity: 0;
+			transform: translateY(50px);
+			transition: $transition;
+
+			&.story-transition {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+
+		&.our-values {
+			// background-image: url('./../../../assets/Images/black-gold-bg.jpg');
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			padding: 20px;
+
+			.tab-content {
+				opacity: 0;
+				transform: translateX(-20px);
+
+				transition: $transition;
+
+				width: 100%;
+
+				.image {
+					img {
+						height: 60px;
+					}
+				}
+				.list {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					width: 100%;
+					gap: 0;
+
+					.value {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+
+						min-height: 120px;
+						width: 33%;
+
+						.title {
+							color: var(--primary-font-color);
+							font-size: 18px;
+							font-weight: 600;
+
+							transition: all 0.5s ease;
+
+							background-image: url('../../../assets/Images/stat-cover-diwan.png');
+							background-size: cover;
+							width: 200px;
+							height: 200px;
+
+							display: flex;
+							justify-content: center;
+							align-items: center;
+						}
+					}
+				}
+			}
+
+			&.values-transition {
+				.tab-content {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+			}
+
+			@media (max-width: 576px) {
+				.tab-content {
+					.list {
+						.value {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+
+		&.provide {
+			flex-direction: column;
+			// background-color: var(--white-bg-color);
+			// color: var(--primary-dark-font-color);
+			padding: 0 10%;
+			padding-top: 50px;
+
+			margin-bottom: 50px;
+
+			opacity: 0;
+			transform: translateY(50px);
+			transition: $transition;
+
+			&.provide-transition {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+
+		&.mission-vision {
+			opacity: 0;
+			transform: translateY(50px);
+			transition: $transition;
+
+			&.mission-vision-transition {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.page-inner {
+		.page-section {
+			flex-direction: column;
+			.partition {
+				text-align: start;
+			}
+			&.landing {
+				.partition {
+					text-align: center;
+				}
+			}
+			.bulk-image {
+				width: 100%;
+				img {
+					max-height: 200px;
+				}
+			}
+		}
+	}
+}

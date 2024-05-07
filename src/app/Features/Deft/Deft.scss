@@ -1,0 +1,229 @@
+$transition: all 0.6s ease-in;
+$side-transition: all 0.2s ease-in;
+
+.page-inner {
+	display: flex;
+	align-items: flex-start;
+	margin-top: var(--header-height);
+	.side-bar {
+		min-width: 260px;
+	}
+	// aside {
+	// 	position: sticky;
+	// 	top: var(--header-height);
+	// 	min-width: 260px;
+	// 	padding-left: 15px;
+	// 	height: 100vh;
+	// 	background-color: #191919;
+	// 	// .input-group {
+	// 	// 	input {
+	// 	// 		background-color: transparent;
+	// 	// 		border: 0;
+	// 	// 		border-bottom: 1px solid;
+	// 	// 		padding: 8px 0 8px 40px;
+	// 	// 		color: white;
+	// 	// 		border-radius: 0px;
+	// 	// 		width: 95%;
+	// 	// 		position: absolute;
+	// 	// 	}
+	// 	// 	i {
+	// 	// 		background-color: transparent !important;
+	// 	// 		padding-top: 12px;
+	// 	// 		border: 0px;
+	// 	// 		color: white;
+	// 	// 		position: relative;
+	// 	// 	}
+	// 	// 	i:hover {
+	// 	// 		cursor: pointer;
+	// 	// 	}
+	// 	// }
+
+	// 	a {
+	// 		display: block;
+	// 		font-size: 16px;
+	// 		margin-bottom: 10px;
+	// 		text-decoration: none;
+	// 		opacity: 0.8;
+
+	// 		-webkit-tap-highlight-color: transparent;
+	// 		span {
+	// 			margin-inline-start: 20px;
+	// 		}
+	// 		i {
+	// 			margin-right: 5px;
+	// 		}
+	// 	}
+
+	// 	a:hover,
+	// 	a.active {
+	// 		position: relative;
+	// 	}
+	// 	a:hover {
+	// 		font-weight: bold;
+	// 	}
+	// 	a.active {
+	// 		opacity: 1;
+	// 		font-weight: bold;
+	// 	}
+	// }
+
+	aside {
+		position: sticky;
+		top: var(--header-height);
+		min-width: 260px;
+		padding-top: 20px;
+		padding-left: 15px;
+		height: 100vh;
+		background-color: #191919;
+
+		.input-group {
+			input {
+				background-color: transparent;
+				border: 0;
+				border-bottom: 1px solid;
+				padding: 8px 0 8px 40px;
+				color: white;
+				border-radius: 0px;
+				width: 95%;
+				position: absolute;
+			}
+			i {
+				background-color: transparent !important;
+				padding-top: 12px;
+				border: 0px;
+				color: white;
+				position: relative;
+			}
+			i:hover {
+				cursor: pointer;
+			}
+		}
+
+		.category {
+			button {
+				font-weight: bold;
+				opacity: 0.8;
+				img {
+					width: 10px;
+					height: 10px;
+					margin-inline-end: 5px;
+					object-fit: contain;
+					transition: $side-transition;
+				}
+
+				&.active {
+					opacity: 1;
+					img {
+						transform: rotate(90deg);
+					}
+				}
+			}
+		}
+	}
+
+	.art-div {
+		overflow: auto;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 20px;
+
+		.category {
+			padding-bottom: 50px;
+			width: 100%;
+			border-bottom: 1px solid white;
+			.sub-title {
+				margin-top: 10px;
+				margin-left: 25px 0px;
+				width: 90%;
+			}
+
+			.images {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+				grid-auto-rows: 250px;
+				gap: 10px;
+
+				.hoverable-img-item {
+					width: 100%;
+
+					opacity: 0;
+					transform: translateY(20px);
+					transition: $transition;
+
+					.img {
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+						cursor: pointer;
+					}
+
+					&.art-transition {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
+			}
+		}
+	}
+
+	.modal {
+		color: var(--gold1);
+		.modal-dialog {
+			max-width: 90%;
+			justify-content: center;
+			.modal-content {
+				background-color: var(--primary-color2);
+				width: auto;
+				.modal-body {
+					margin: auto;
+					.img-modal {
+						max-height: 65vh;
+					}
+				}
+				.modal-header,
+				.modal-footer {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.page-inner {
+		padding: 20px;
+		aside {
+			display: none;
+		}
+	}
+}
+
+// Diwan studios' projects:
+// Commercial
+// 	** FIFA
+// 	** EAA
+// 	** PubG
+// 	** HSBC
+// 	** Adidas
+// Offices and factories
+// 	Orange
+// 	Mondelez
+// 	Careem
+// 	Money
+// 	Virtual
+// 	GTE
+// Restaurants
+// 	Bonita
+// 	Taiyaki
+// 	Butcher
+// 	Kansas
+// 	Mori
+// Malls
+// 	Rubix
+// 	Gleem
+// 	Tio
+// Showrooms
+// 	Pro
+// 	Seats
+// Entertainment
+// 	Lane

@@ -1,0 +1,260 @@
+$transition: all 0.6s ease-in;
+$side-transition: all 0.2s ease-in;
+
+.page-inner {
+	display: flex;
+	align-items: flex-start;
+	margin-top: var(--header-height);
+	.side-bar {
+		min-width: 260px;
+	}
+	aside {
+		position: sticky;
+		top: var(--header-height);
+		min-width: 260px;
+		padding-left: 15px;
+		height: 100vh;
+		background-color: #191919;
+
+		.input-group {
+			input {
+				background-color: transparent;
+				border: 0;
+				border-bottom: 1px solid;
+				padding: 8px 0 8px 40px;
+				color: white;
+				border-radius: 0px;
+				width: 95%;
+				position: absolute;
+			}
+			i {
+				background-color: transparent !important;
+				padding-top: 12px;
+				border: 0px;
+				color: white;
+				position: relative;
+			}
+			i:hover {
+				cursor: pointer;
+			}
+		}
+
+		.category {
+			button {
+				font-weight: bold;
+				img {
+					width: 10px;
+					height: 10px;
+					margin-inline-end: 5px;
+					object-fit: contain;
+					transition: $side-transition;
+				}
+				&[aria-expanded='true'] {
+					img {
+						transform: rotate(90deg);
+					}
+				}
+			}
+
+			.project-list {
+				margin-inline-start: 26px;
+
+				a {
+					font-size: 14px;
+					font-weight: bold;
+					margin-bottom: 10px;
+					text-decoration: none;
+					opacity: 0.8;
+
+					display: flex;
+					justify-content: space-between;
+					width: 90%;
+
+					-webkit-tap-highlight-color: transparent;
+					span {
+						margin-inline-start: 5px;
+					}
+					i {
+						margin-right: 5px;
+					}
+				}
+
+				a:hover,
+				a.active {
+					position: relative;
+				}
+				a:hover {
+					opacity: 1;
+				}
+				a.active {
+					opacity: 1;
+					font-weight: 900;
+				}
+			}
+
+			&.more-projects {
+				a {
+					opacity: 1 !important;
+					padding: 0 !important;
+
+					color: var(--gold1);
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	.art-div {
+		overflow: auto;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 20px;
+
+		.category {
+			margin-bottom: 50px;
+			width: 100%;
+			border-bottom: 1px solid white;
+			.sub-title {
+				max-width: 500px;
+				margin-top: 10px;
+				width: 90%;
+			}
+
+			.projects {
+				margin-bottom: 30px;
+				.images {
+					// display: flex;
+					// flex-wrap: wrap;
+					// justify-content: flex-start;
+
+					display: grid;
+					grid-template-columns: repeat(
+						auto-fill,
+						minmax(250px, 300px)
+					);
+					grid-auto-rows: 250px;
+					gap: 10px;
+
+					.hoverable-img-item {
+						width: 100%;
+
+						opacity: 0;
+						transform: translateY(20px);
+						transition: $transition;
+
+						.img {
+							height: 100%;
+							width: 100%;
+							object-fit: cover;
+							cursor: pointer;
+						}
+
+						&.art-transition {
+							opacity: 1;
+							transform: translateY(0px);
+						}
+					}
+				}
+			}
+
+			&.more-projects {
+				border: none;
+				.images {
+					// display: flex;
+					// flex-wrap: wrap;
+					// justify-content: flex-start;
+					display: grid;
+					grid-template-columns: repeat(
+						auto-fill,
+						minmax(250px, 300px)
+					);
+					grid-auto-rows: 250px;
+					gap: 10px;
+					.hoverable-img-item {
+						width: 100%;
+						// max-width: 300px;
+						// margin: 10px;
+
+						position: relative;
+						overflow: hidden;
+						.img {
+							height: 100%;
+							width: 100%;
+							object-fit: cover;
+							cursor: pointer;
+						}
+
+						.visible {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							background-color: rgba(0, 0, 0, 0.4);
+							width: 100%;
+							text-align: center;
+							padding: 10px 0;
+							color: var(--primary-font-color);
+						}
+					}
+				}
+			}
+		}
+	}
+	.modal {
+		color: var(--gold1);
+		.modal-dialog {
+			max-width: 90%;
+			justify-content: center;
+			.modal-content {
+				background-color: var(--primary-color2);
+				width: auto;
+				.modal-body {
+					margin: auto;
+					.img-modal {
+						max-height: 65vh;
+					}
+				}
+				.modal-header,
+				.modal-footer {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.page-inner {
+		padding: 20px;
+		aside {
+			display: none;
+		}
+
+		.art-div {
+			.category {
+				&.more-projects {
+					.images {
+						.hoverable-img-item {
+							max-width: none;
+							margin: 10px 0;
+							.img {
+								max-height: 300px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Amr diwan's projects:
+// 	MERYAL
+// 	AL MOOSA
+// 	** FIFA
+// 	AL RAYYAN
+// 	ALIF
+// 	** HSBC
+// 	** EAA
+// 	** PUBG
+// 	** ADIDAS
+// 	MONEY FELLOWS
