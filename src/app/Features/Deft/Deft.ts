@@ -80,7 +80,6 @@ export class DeftComponent {
                 const observer = new IntersectionObserver(entries => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            debugger
                             const categoryAnchor = this.el.nativeElement.querySelector(`[data-category="${art.parentElement?.parentElement?.getAttribute('id')}"]`);
                             this.activetab(categoryAnchor)
                             art.classList.add('art-transition');
@@ -112,7 +111,6 @@ export class DeftComponent {
     }
 
     attachClickEventListeners(category: string) {
-        debugger
         this.location.go('/deft/' + category.trim().toLocaleLowerCase());
         const parent = this.el.nativeElement.querySelector(`#${category.replace(' ', '').trim().toLocaleUpperCase()}`)
         this.scrollTo(parent);
