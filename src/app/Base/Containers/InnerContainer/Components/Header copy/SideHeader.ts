@@ -142,14 +142,15 @@ export class SideHeaderComponent implements OnInit {
 			ImgAlt: '',
 			ImgSrc: 'assets/Images/Deft/Painting/painting1.webp',
 			Links: []
-		}, {
-			Title: 'Sculptures',
-			ImgAlt: 'Sculptures alt',
-			ImgSrc: '',
-			Links: [
+		},
+		// {
+		// 	Title: 'Sculptures',
+		// 	ImgAlt: 'Sculptures alt',
+		// 	ImgSrc: '',
+		// 	Links: [
 
-			]
-		}
+		// 	]
+		// }
 
 
 
