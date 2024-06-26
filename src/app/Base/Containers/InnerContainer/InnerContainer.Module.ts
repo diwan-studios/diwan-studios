@@ -12,9 +12,10 @@ import { MenuComponent } from './Components/Menu/Menu';
 import { HeaderComponent } from './Components/Header/Header';
 import { SideHeaderComponent } from './Components/Header copy/SideHeader';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, InnerContainerRoutes, RouterModule],
+  imports: [CommonModule, FormsModule, InnerContainerRoutes, RouterModule, TranslateModule],
   declarations: [
     InnerContainer,
     HeaderComponent,

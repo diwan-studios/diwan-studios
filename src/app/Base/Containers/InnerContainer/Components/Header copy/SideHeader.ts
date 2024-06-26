@@ -2,6 +2,7 @@ import { AppConfig } from '@App/Base/AppConfig';
 import { SidebarAnimationService } from '@App/Common/Services/SidebarAnimation.Service';
 import { RoutePaths } from '@App/Common/Settings/RoutePaths';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 export class Link {
 	Title!: string;
@@ -13,6 +14,11 @@ export class ArtCategory {
 	ImgSrc!: string;
 	ImgAlt!: string;
 	Links!: Link[];
+}
+
+export class Language {
+	Name!: string;
+	Key!: string;
 }
 @Component({
 	selector: 'app-side-header',
@@ -26,7 +32,14 @@ export class SideHeaderComponent implements OnInit {
 	@ViewChild('dropdownMenuDeft') dropdownMenuDeft!: ElementRef;
 
 	PortfolioLink!: string;
-	constructor(private Animation: SidebarAnimationService, private AppConfig: AppConfig) { }
+
+	AvailableLanguages: Language[] = [{ Name: 'English', Key: 'en' }, { Name: 'Arabic', Key: 'ar' }]
+
+	constructor(
+		private Animation: SidebarAnimationService,
+		private AppConfig: AppConfig,
+		private TranslateService: TranslateService
+	) { }
 
 	ngOnInit(): void {
 		this.PortfolioLink = this.AppConfig.env.PortfolioLink;
@@ -202,5 +215,9 @@ export class SideHeaderComponent implements OnInit {
 		this.Animation.animationflag = false;
 		this.Animation.transform();
 
+	}
+
+	useLanguage(language: string): void {
+		this.TranslateService.use(language);
 	}
 }
