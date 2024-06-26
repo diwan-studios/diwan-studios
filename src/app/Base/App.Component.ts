@@ -4,7 +4,7 @@ import { PlatformLocation } from '@angular/common';
 import { RoutePaths } from '../Common/Settings/RoutePaths';
 import { HttpClient } from '@angular/common/http';
 import { SidebarAnimationService } from '@App/Common/Services/SidebarAnimation.Service';
-import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '@App/Common/Services/Language.Service';
 
 @Component({
   selector: 'app-root',
@@ -23,11 +23,11 @@ export class AppComponent {
     private appRef: ApplicationRef,
     private http: HttpClient,
     private SidebarAnimationService: SidebarAnimationService,
-    private TranslateService: TranslateService
+    private LanguageService: LanguageService,
   ) { }
 
   ngOnInit() {
-    this.SetLanguage();
+    this.LanguageService.SetLanguageOnAppInit();
     this.PreLoaderListener();
     this.ScrollUpSub();
     this.CheckIOS();
@@ -119,11 +119,4 @@ export class AppComponent {
     }
   }
 
-  SetLanguage() {
-    let browserLang = this.TranslateService.getBrowserLang()
-    console.log(`browser's language: ${browserLang}`);
-
-    this.TranslateService.setDefaultLang('en');
-    this.TranslateService.use(browserLang ?? this.TranslateService.defaultLang);
-  }
 }

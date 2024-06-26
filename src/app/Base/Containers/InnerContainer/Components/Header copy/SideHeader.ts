@@ -1,8 +1,8 @@
 import { AppConfig } from '@App/Base/AppConfig';
+import { LanguageService } from '@App/Common/Services/Language.Service';
 import { SidebarAnimationService } from '@App/Common/Services/SidebarAnimation.Service';
 import { RoutePaths } from '@App/Common/Settings/RoutePaths';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 
 export class Link {
 	Title!: string;
@@ -38,7 +38,7 @@ export class SideHeaderComponent implements OnInit {
 	constructor(
 		private Animation: SidebarAnimationService,
 		private AppConfig: AppConfig,
-		private TranslateService: TranslateService
+		private LanguageService: LanguageService
 	) { }
 
 	ngOnInit(): void {
@@ -218,6 +218,6 @@ export class SideHeaderComponent implements OnInit {
 	}
 
 	useLanguage(language: string): void {
-		this.TranslateService.use(language);
+		this.LanguageService.useLanguage(language);
 	}
 }
