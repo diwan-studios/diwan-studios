@@ -2,13 +2,14 @@ import { RoutePaths } from '@App/Common/Settings/RoutePaths';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-LandingCarousel',
     standalone: true,
     templateUrl: './LandingCarousel.html',
     styleUrls: ['LandingCarousel.scss'],
-    imports: [CommonModule, RouterModule]
+    imports: [CommonModule, RouterModule, TranslateModule]
 })
 
 export class LandingCarouselComponent {

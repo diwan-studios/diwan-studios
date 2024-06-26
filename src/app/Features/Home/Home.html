@@ -25,8 +25,8 @@
 	<!-- <div class="page-container"> -->
 	<section class="page-section no-min about lateral-padding">
 		<div class="sub-title">
-			<h3>Who we are</h3>
-			<h4 class="gold-text">Break the rules.</h4>
+			<h3>{{'Who we are' | translate }}</h3>
+			<h4 class="gold-text">{{'Break the rules.' | translate }}</h4>
 			<p class="text-start">
 				<strong>Diwan studios</strong> combines the concepts of <strong>graffiti</strong> and <strong>architecture</strong> design elements. <br />
 				<small>we guarantee high quality personalized designs that will bring your brand to life.</small>
@@ -42,8 +42,8 @@
 						[attr.number]="stat.Number"
 						[attr.timeinterval]="stat.TimeInterval"></div>
 					<div class="text text{{i}}">
-						<div class="stat-title">{{ stat.Title }}</div>
-						<div class="description">{{ stat.Description }}</div>
+						<div class="stat-title">{{stat.Title | translate }}</div>
+						<div class="description">{{ stat.Description | translate }}</div>
 					</div>
 				</div>
 			</div>

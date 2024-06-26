@@ -10,12 +10,13 @@ import { Categories, CategoryItem } from './Data/Categories';
 import { ValueItem, Values } from './Data/Values';
 import { LandingCarouselComponent } from '@App/Common/Widgets/LandingCarousel/LandingCarousel';
 import { AppConfig } from '@App/Base/AppConfig';
+import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
 	standalone: true,
 	templateUrl: './Home.html',
 	styleUrls: ['Home.scss'],
-	imports: [FormsModule, CommonModule, RouterModule, LandingCarouselComponent, CarouselComponent],
+	imports: [FormsModule, CommonModule, RouterModule, LandingCarouselComponent, CarouselComponent, TranslateModule],
 })
 export class HomeComponent implements OnInit {
 	RoutePaths = RoutePaths;
@@ -26,10 +27,12 @@ export class HomeComponent implements OnInit {
 	Partners: PartnerItem[] = Partners;
 	PartnersImages: string[] = Partners.map(p => p.ImgSrc);
 	PortfolioLink!: string;
-	constructor(private Router: Router, private AppConfig: AppConfig) { }
+	constructor(private Router: Router, private AppConfig: AppConfig, private TranslateService: TranslateService) { }
 
 	ngOnInit(): void {
 		this.PortfolioLink = this.AppConfig.env.PortfolioLink;
+
+
 	}
 
 	ngAfterViewInit() {
@@ -39,6 +42,9 @@ export class HomeComponent implements OnInit {
 		this.Animation.Categories();
 		this.Animation.Values();
 		this.Animation.Partners();
+
+		// to change stats numbers after in app language change
+		this.Translation.Stat();
 	}
 
 	Animation = {
@@ -87,7 +93,7 @@ export class HomeComponent implements OnInit {
 			const stats = document.querySelectorAll('.stat');
 			stats.forEach(stat => observer.observe(stat));
 
-			function animateNumber(element: any) {
+			const animateNumber = (element: any) => {
 				return new Promise<void>(resolve => {
 					const numberElement = element.querySelector('.number');
 					const targetNumber = parseInt(numberElement.getAttribute('number'));
@@ -112,7 +118,9 @@ export class HomeComponent implements OnInit {
 						numberElement.innerText = currentNumber;
 						if (currentNumber >= targetNumber) {
 							if (numberElement.id != 4) {
-								numberElement.innerText += '+'
+								numberElement.innerText += '+';
+								// add the translated stat
+								numberElement.innerText = this.TranslateService.instant(numberElement.innerText);
 							}
 							clearInterval(interval);
 							resolve();
@@ -207,6 +215,19 @@ export class HomeComponent implements OnInit {
 			});
 			partnersObserver.observe(partners);
 		}
+	}
+
+	Translation = {
+		Stat: () => {
+			this.TranslateService.onLangChange.subscribe((event: LangChangeEvent) => {
+				const stats = document.querySelectorAll('.stat');
+				stats.forEach(stat => {
+					const numberElement: any = stat.querySelector('.number');
+					const targetNumber = numberElement.getAttribute('number');
+					numberElement.innerText = this.TranslateService.instant(targetNumber);
+				});
+			});
+		},
 	}
 
 	GotoStat(link: string) {

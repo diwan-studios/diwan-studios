@@ -23,15 +23,11 @@ export class AppComponent {
     private appRef: ApplicationRef,
     private http: HttpClient,
     private SidebarAnimationService: SidebarAnimationService,
-    private translate: TranslateService
-  ) {
-    console.log(`browser's language: ${translate.getBrowserLang()}`);
-    let browserLang = translate.getBrowserLang()
-    translate.setDefaultLang('en');
-    translate.use(browserLang ?? 'en');
-  }
+    private TranslateService: TranslateService
+  ) { }
 
   ngOnInit() {
+    this.SetLanguage();
     this.PreLoaderListener();
     this.ScrollUpSub();
     this.CheckIOS();
@@ -123,5 +119,11 @@ export class AppComponent {
     }
   }
 
+  SetLanguage() {
+    let browserLang = this.TranslateService.getBrowserLang()
+    console.log(`browser's language: ${browserLang}`);
 
+    this.TranslateService.setDefaultLang('en');
+    this.TranslateService.use(browserLang ?? this.TranslateService.defaultLang);
+  }
 }
