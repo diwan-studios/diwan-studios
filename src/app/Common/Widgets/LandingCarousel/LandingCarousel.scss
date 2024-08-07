@@ -63,11 +63,12 @@ $transition: all 1s ease-in;
 
 	.title {
 		position: absolute;
-		left: 10%;
+		// left: 10%;
 		top: 50%;
 		transform: translateY(-50%);
 		text-align: start;
 		margin-inline-end: 20px;
+		margin-inline-start: 10%;
 		h1 {
 			text-transform: uppercase;
 			font-weight: bold;

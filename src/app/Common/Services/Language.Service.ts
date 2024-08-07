@@ -11,13 +11,26 @@ export class LanguageService {
     ) { }
 
     SetLanguageOnAppInit() {
-        let browserLang = this.TranslateService.getBrowserLang()
-        console.log(`browser's language: ${browserLang}`);
-        localStorage.setItem('lang', browserLang ?? 'en')
-
         this.TranslateService.setDefaultLang('en');
-        this.TranslateService.use(browserLang ?? this.TranslateService.defaultLang);
+
+        let browserLang = this.TranslateService.getBrowserLang();
+        let localStorageLang = localStorage.getItem('lang');
+
+        // console.log(`browser's language: ${browserLang}`);
+        if (!localStorageLang) {
+            localStorage.setItem('lang', browserLang ?? 'en');
+            this.TranslateService.use(browserLang ?? this.TranslateService.defaultLang);
+        } else {
+            this.TranslateService.use(localStorageLang ?? this.TranslateService.defaultLang);
+        }
+
         this.SetDirection();
+    }
+
+    useLanguage(language: string): void {
+        this.TranslateService.use(language);
+        localStorage.setItem('lang', language)
+        this.SetDirection()
     }
 
     private SetDirection() {
@@ -29,11 +42,5 @@ export class LanguageService {
         }
         const renderer = this.RendererFactory.createRenderer(null, null);
         renderer.setAttribute(document.body, 'dir', this.textDirection);
-    }
-
-    useLanguage(language: string): void {
-        this.TranslateService.use(language);
-        localStorage.setItem('lang', language)
-        this.SetDirection()
     }
 }
