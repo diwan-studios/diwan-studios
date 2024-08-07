@@ -4,6 +4,8 @@ import { PlatformLocation } from '@angular/common';
 import { RoutePaths } from '../Common/Settings/RoutePaths';
 import { HttpClient } from '@angular/common/http';
 import { SidebarAnimationService } from '@App/Common/Services/SidebarAnimation.Service';
+import { TranslateService } from '@ngx-translate/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -21,14 +23,23 @@ export class AppComponent {
     private Router: Router,
     private appRef: ApplicationRef,
     private http: HttpClient,
-    private SidebarAnimationService: SidebarAnimationService
-  ) { }
+    private SidebarAnimationService: SidebarAnimationService,
+    private translate: TranslateService,
+    private title: Title,
+    private meta: Meta
+  ) {
+    console.log(`browser's language: ${translate.getBrowserLang()}`);
+    let browserLang = translate.getBrowserLang()
+    translate.setDefaultLang('en');
+    translate.use(browserLang ?? 'en');
+  }
 
   ngOnInit() {
     this.PreLoaderListener();
     this.ScrollUpSub();
     this.CheckIOS();
-    this.loadImages();
+    // this.loadImages();
+    this.SetMetaData();
   }
 
   images: string[] = [
@@ -116,5 +127,17 @@ export class AppComponent {
     }
   }
 
+  SetMetaData() {
+    // const title = data.title || 'Default Title';
+    // const description = data.description || 'Default Description';
 
+    this.title.setTitle('Diwan Studios: Transform Your Space with Stunning Graffiti Art and Murals');
+
+    this.meta.addTags([
+      { name: 'description', content: 'Discover the world of graffiti art with Diwan Studios. Our professional mural artists create unique wall art and interior design solutions. Transform your space with our captivating artwork.' },
+      { name: 'keywords', content: 'graffiti art, graffiti murals, wall art, art decor, interior design, graffiti artist, professional mural artist, wall paintings, artwork, egypt, alexandria, amr diwan, diwan studios' },
+    ]);
+
+    // this.meta.updateTag({ name: 'description', content: 'Your page description' });
+  }
 }
