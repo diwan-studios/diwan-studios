@@ -18,6 +18,7 @@ export class AppComponent {
   NoLoader: boolean = false;
   ErrorToast!: number;
 
+  Schema: string = '';
   constructor(
     private PlatformLocation: PlatformLocation,
     private Router: Router,
@@ -138,6 +139,27 @@ export class AppComponent {
       { name: 'keywords', content: 'graffiti art, graffiti murals, wall art, art decor, interior design, graffiti artist, professional mural artist, wall paintings, artwork, egypt, alexandria, amr diwan, diwan studios' },
     ]);
 
+    // to make it dynamic in pages
     // this.meta.updateTag({ name: 'description', content: 'Your page description' });
+
+    // add schema.org
+    const schema: string = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Diwan Studios",
+      "logo": "https://diwanstudios.com/assets/Images/diwan-handbook/logo-gold.png",
+      "description": "We are graffiti art pioneers, transforming ordinary spaces into extraordinary art decor canvases.",
+      "url": "https://diwanstudios.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "badawy stanley, 6 إسماعيل زكي، kafr abdo",
+        "addressLocality": "Alexandria",
+        "addressRegion": "Alexandria",
+        "postalCode": "5452005",
+        "addressCountry": "Egypt"
+      },
+      "telephone": "+2035431524"
+    });
+    this.Schema = schema;
   }
 }
