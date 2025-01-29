@@ -125,6 +125,7 @@ export class ArtComponent {
         rootMargin: '10px',
         threshold: 0.1,
     };
+
     private checkElementsVisibility() {
         const categoryElements = this.el.nativeElement.querySelectorAll('.category');
 
@@ -231,7 +232,6 @@ export class ArtComponent {
     }
 
     attachClickEventListeners(category: string, project: string) {
-        debugger
         this.location.go('/artworks/' + category.replace(' ', '').trim().toLocaleLowerCase() + '/' + project.replace(' ', '').trim().toLocaleLowerCase());
         const parent = this.el.nativeElement.querySelector(`.${category.replace(' ', '').trim().toLocaleUpperCase()}`)
         const id = `#${project.replace(' ', '').trim().toLocaleUpperCase()}`;
@@ -262,6 +262,7 @@ export class ArtComponent {
         this.checkElementsVisibility()
     }
 
+    //#region images modal and navigating
     onImageClick(id: number, imageIndex: number) {
         console.log(id);
         this.selectedProject = this.Projects.find(p => p.Id == id)!;
@@ -296,4 +297,5 @@ export class ArtComponent {
     onGoToImage(imageIndex: number) {
         this.selectedProjectIndex = imageIndex;
     }
+    //#endregion
 }

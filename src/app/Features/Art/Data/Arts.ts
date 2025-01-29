@@ -282,7 +282,7 @@ export const ArtProjects: ArtProjectItem[] = [
         Id: 13,
         Name: 'Bonita',
         Description: 'One of the top mexican cuisines in Egypt.\nThe artwork along with the neon lights purpose is to give the place Mexican vibes as if clients are stepping into the heart of Mexico.',
-        Location: 'Qatar',
+        Location: 'Egypt',
         Images: [
             'assets/Images/Projects/BONITA/bonita1.webp',
             'assets/Images/Projects/BONITA/bonita2.webp',
@@ -295,7 +295,7 @@ export const ArtProjects: ArtProjectItem[] = [
         Id: 14,
         Name: 'Taiyaki',
         Description: 'Promoting the Origin of the place through murals that show the street of japan which highlights the japanese culture.',
-        Location: 'Qatar',
+        Location: 'Egypt',
         Images: [
             'assets/Images/Projects/taiyaki/taiyaki1.webp',
             'assets/Images/Projects/taiyaki/taiyaki2.webp',
@@ -308,7 +308,7 @@ export const ArtProjects: ArtProjectItem[] = [
         Id: 15,
         Name: 'Butcher\'s Burger',
         Description: 'Number of branches: 10.\nPutting an identity to Butcher\'s Burger walls that matches its modern interior.',
-        Location: 'Qatar',
+        Location: 'Egypt',
         Images: [
             'assets/Images/Projects/BUTCHER-BURGER/burcher1.webp',
             'assets/Images/Projects/BUTCHER-BURGER/burcher2.webp',
@@ -320,7 +320,7 @@ export const ArtProjects: ArtProjectItem[] = [
         Id: 16,
         Name: 'Kansas',
         Description: 'Number of branches: 5.\nGiving a new look to a fried chicken quick service, Kansas interior is all about hip hop street graffiti.',
-        Location: 'Qatar',
+        Location: 'Egypt',
         Images: [
             'assets/Images/Projects/kansas/kansas1.webp',
         ],
@@ -330,7 +330,7 @@ export const ArtProjects: ArtProjectItem[] = [
         Id: 17,
         Name: 'Mori Sushi',
         Description: 'Japanese murals artwork.',
-        Location: 'Qatar',
+        Location: 'Egypt',
         Images: [
             'assets/Images/Projects/MORI-SUSHI/MORI-SUSHI-1.webp',
             'assets/Images/Projects/MORI-SUSHI/MORI-SUSHI-2.webp',
