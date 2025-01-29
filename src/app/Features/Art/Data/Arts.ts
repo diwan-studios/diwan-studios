@@ -4,6 +4,7 @@ export class ArtCategory {
 }
 
 export class ArtProjectItem {
+    Id!: number;
     Name!: string;
     Description!: string;
     Images!: string[];
@@ -71,6 +72,7 @@ export const ArtProjects: ArtProjectItem[] = [
     //     CategoryName: 'Commercial'
     // },
     {
+        Id: 1,
         Name: 'Lane 9',
         Description: 'Fluorescent interactive art concept around 500 meter square.',
         Location: 'Egypt',
@@ -92,6 +94,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Entertainments'
     },
     {
+        Id: 2,
         Name: 'Mondelez',
         Description: `The point here was to story-tell the employees' health, safety and enviroment through typography.\naccentuating the brand names of Mondelez through applying the popping colors for a lively atmosphere`,
         Location: 'Egypt',
@@ -106,6 +109,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Offices and factories'
     },
     {
+        Id: 3,
         Name: 'Careem',
         Description: 'Inspiring graffiti art used as a motivation for growth using the brand color.',
         Location: 'Egypt',
@@ -117,6 +121,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Offices and factories'
     },
     {
+        Id: 4,
         Name: 'Money Fellows',
         Description: 'The graffiti drawn on the walls of their head offices in cairo took the walls to another place to keep up the positive vibes in the place.',
         Location: 'Egypt',
@@ -134,6 +139,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Offices and factories'
     },
     {
+        Id: 5,
         Name: 'Virtual Quest',
         Description: 'Number of walls: 10.\nGame developnig office.\nAdding an artistic touch to walls of the place to match the identity and make it special.',
         Location: 'Egypt',
@@ -148,6 +154,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Offices and factories'
     },
     {
+        Id: 6,
         Name: 'GTE',
         Description: 'Travel solutions company.\nUnique artwork to keep up the positive vibes.',
         Location: 'Egypt',
@@ -164,6 +171,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Offices and factories'
     },
     {
+        Id: 7,
         Name: 'Orange',
         Description: 'Whole building consist of 11 floors.',
         Location: 'Egypt',
@@ -180,6 +188,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Offices and factories'
     },
     {
+        Id: 8,
         Name: 'Rubix Park',
         Description: 'Number of walls: 8.\nA fun way to keep the audience included.\nIn this project we used the interactive art concept in which the art is involved with the spectator in a way.\nHaving interactive artwork for people to enjoy like the rubik\'s cube which can be used as a bench.',
         Location: 'Egypt',
@@ -195,6 +204,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Malls'
     },
     {
+        Id: 9,
         Name: 'Gleem Bay',
         Description: 'Number of walls: 8.\nAn outdoor hub featuring the beach and summer vibes.',
         Location: 'Egypt',
@@ -210,6 +220,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Malls'
     },
     {
+        Id: 10,
         Name: 'Tio Complex',
         Description: '',
         Location: 'Egypt',
@@ -233,6 +244,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Malls'
     },
     {
+        Id: 11,
         Name: 'Pro Guys',
         Description: 'Pro Guys is one of the best wrapping and car styling companies in Egypt.\nFocus was showcasing their identity and work through our murals ending it witha statement wall of Pro Guy\'s dream team',
         Location: 'Egypt',
@@ -249,6 +261,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Showrooms'
     },
     {
+        Id: 12,
         Name: 'Seats',
         Description: 'Adding color to the walls through tropical and relatable artwork.',
         Location: 'Egypt',
@@ -266,6 +279,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Showrooms'
     },
     {
+        Id: 13,
         Name: 'Bonita',
         Description: 'One of the top mexican cuisines in Egypt.\nThe artwork along with the neon lights purpose is to give the place Mexican vibes as if clients are stepping into the heart of Mexico.',
         Location: 'Qatar',
@@ -278,6 +292,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Restaurants'
     },
     {
+        Id: 14,
         Name: 'Taiyaki',
         Description: 'Promoting the Origin of the place through murals that show the street of japan which highlights the japanese culture.',
         Location: 'Qatar',
@@ -290,6 +305,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Restaurants'
     },
     {
+        Id: 15,
         Name: 'Butcher\'s Burger',
         Description: 'Number of branches: 10.\nPutting an identity to Butcher\'s Burger walls that matches its modern interior.',
         Location: 'Qatar',
@@ -301,6 +317,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Restaurants'
     },
     {
+        Id: 16,
         Name: 'Kansas',
         Description: 'Number of branches: 5.\nGiving a new look to a fried chicken quick service, Kansas interior is all about hip hop street graffiti.',
         Location: 'Qatar',
@@ -310,6 +327,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Restaurants'
     },
     {
+        Id: 17,
         Name: 'Mori Sushi',
         Description: 'Japanese murals artwork.',
         Location: 'Qatar',
@@ -336,52 +354,56 @@ export const ArtCategories: ArtCategory[] = [
     { Name: 'Entertainment', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Entertainments') },
 ];
 
-export const MoreArtProjects: ArtProjectItem[] =
-    [
-        {
-            Name: 'FIFA',
-            Description: '',
-            Location: 'EGYPT',
-            Images: [
-                'assets/Images/More-Projects/fifa2.webp',
-            ],
-            Link: 'artworks/fifa'
-        },
-        {
-            Name: 'EAA',
-            Description: 'EAA envisions bringing new life chances, real hope and opportunities to improve the lives of poor and marginalised children, youth and women especially in the developing world.',
-            Location: 'Qatar',
-            Images: [
-                'assets/Images/Projects/EAA/EAA1.webp',
-            ],
-            Link: 'artworks/eaa'
-        },
-        {
-            Name: 'PubG',
-            Description: `In celebration of Vikendi Reborn we couldn't miss the chance to add our touches onto PS5 with an illustraion for PubG game.`,
-            Location: 'Egypt',
-            Images: [
-                // 'assets/Images/Projects/pubg/pubg1.png',
-                'assets/Images/Projects/pubg/pubg2.webp',
-            ],
-            Link: 'artworks/pubg'
-        },
-        {
-            Name: 'HSBC',
-            Description: 'This is from the "Vision of Our City" campaign.\nThe idea of representing each location of the bank in\nthis project we worked on the headquarters in Cairo.\nIn the piece we include pixels and personalities that\ndepict the role of technology and a new female-led\ngeneration of entrepreneurs. \nThis generation is puttingsustainable initiatives first, represented by plants and the shape of the lotus; a symbol of rebirth.',
-            Location: 'Egypt',
-            Images: [
-                'assets/Images/Projects/hsbc/hsbc1.webp',
-            ],
-            Link: 'artworks/hsbc'
-        },
-        {
-            Name: 'Adidas',
-            Description: 'The design incorporates the finest aspects of modern and ancient Egyptian art and architecture into a spectacular masterpiece in the center lays two main elements instantly grabing on attention diwan studios graffiti artwork and adidas trefoil centered in a perfect combination fading away the boundary between art and the everyday world.',
-            Location: 'Egypt',
-            Images: [
-                'assets/Images/Projects/adidas/adidas1.webp',
-            ],
-            Link: 'artworks/adidas'
-        },
-    ];
+export const MoreArtProjects: ArtProjectItem[] = [
+    {
+        Id: 1,
+        Name: 'FIFA',
+        Description: '',
+        Location: 'EGYPT',
+        Images: [
+            'assets/Images/More-Projects/fifa2.webp',
+        ],
+        Link: 'artworks/fifa'
+    },
+    {
+        Id: 2,
+        Name: 'EAA',
+        Description: 'EAA envisions bringing new life chances, real hope and opportunities to improve the lives of poor and marginalised children, youth and women especially in the developing world.',
+        Location: 'Qatar',
+        Images: [
+            'assets/Images/Projects/EAA/EAA1.webp',
+        ],
+        Link: 'artworks/eaa'
+    },
+    {
+        Id: 3,
+        Name: 'PubG',
+        Description: `In celebration of Vikendi Reborn we couldn't miss the chance to add our touches onto PS5 with an illustraion for PubG game.`,
+        Location: 'Egypt',
+        Images: [
+            // 'assets/Images/Projects/pubg/pubg1.png',
+            'assets/Images/Projects/pubg/pubg2.webp',
+        ],
+        Link: 'artworks/pubg'
+    },
+    {
+        Id: 4,
+        Name: 'HSBC',
+        Description: 'This is from the "Vision of Our City" campaign.\nThe idea of representing each location of the bank in\nthis project we worked on the headquarters in Cairo.\nIn the piece we include pixels and personalities that\ndepict the role of technology and a new female-led\ngeneration of entrepreneurs. \nThis generation is puttingsustainable initiatives first, represented by plants and the shape of the lotus; a symbol of rebirth.',
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/Projects/hsbc/hsbc1.webp',
+        ],
+        Link: 'artworks/hsbc'
+    },
+    {
+        Id: 5,
+        Name: 'Adidas',
+        Description: 'The design incorporates the finest aspects of modern and ancient Egyptian art and architecture into a spectacular masterpiece in the center lays two main elements instantly grabing on attention diwan studios graffiti artwork and adidas trefoil centered in a perfect combination fading away the boundary between art and the everyday world.',
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/Projects/adidas/adidas1.webp',
+        ],
+        Link: 'artworks/adidas'
+    },
+];

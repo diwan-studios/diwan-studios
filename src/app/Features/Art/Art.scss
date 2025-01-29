@@ -199,24 +199,68 @@ $side-transition: all 0.2s ease-in;
 			}
 		}
 	}
-	.modal {
-		color: var(--gold1);
-		.modal-dialog {
-			max-width: 90%;
-			justify-content: center;
-			.modal-content {
-				background-color: var(--primary-color2);
-				width: auto;
-				.modal-body {
-					margin: auto;
-					.img-modal {
-						max-height: 65vh;
+}
+.modal {
+	color: var(--gold1);
+	.modal-dialog {
+		max-width: 90%;
+		justify-content: center;
+		.modal-content {
+			background-color: var(--primary-color2);
+			width: auto;
+			.modal-body {
+				margin: auto;
+
+				.img-modal {
+					max-height: 65vh;
+				}
+			}
+			.modal-header,
+			.modal-footer {
+				.indicators {
+					.arrow {
+						background-color: transparent;
+						color: var(--secondary-font-color);
+						border: none;
+						outline: none;
+						cursor: pointer;
+						font-size: 24px;
+						z-index: 1;
+
+						&.prev {
+							left: 0;
+						}
+
+						&.next {
+							right: 0;
+						}
+					}
+
+					position: absolute;
+					bottom: 10px;
+					left: 50%;
+					transform: translateX(-50%);
+					display: flex;
+					align-items: center;
+					z-index: 1;
+
+					.indicator {
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						background-color: rgba(255, 255, 255, 0.5);
+						margin: 0 5px;
+						cursor: pointer;
+
+						&.active {
+							background-color: white;
+						}
+						&:hover {
+							background-color: white;
+						}
 					}
 				}
-				.modal-header,
-				.modal-footer {
-					border: none;
-				}
+				border: none;
 			}
 		}
 	}
@@ -246,15 +290,3 @@ $side-transition: all 0.2s ease-in;
 		}
 	}
 }
-
-// Amr diwan's projects:
-// 	MERYAL
-// 	AL MOOSA
-// 	** FIFA
-// 	AL RAYYAN
-// 	ALIF
-// 	** HSBC
-// 	** EAA
-// 	** PUBG
-// 	** ADIDAS
-// 	MONEY FELLOWS

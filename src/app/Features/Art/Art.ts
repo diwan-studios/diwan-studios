@@ -26,6 +26,8 @@ export class ArtComponent {
     Projects: ArtProjectItem[] = ArtProjects;
     filteredProjects: ArtProjectItem[];
     project: string = '';
+    selectedProject!: ArtProjectItem;
+    selectedProjectIndex: number = 0;
 
     Categories: ArtCategory[] = ArtCategories;
     MoreProjects: ArtProjectItem[] = MoreArtProjects;
@@ -258,5 +260,40 @@ export class ArtComponent {
 
     onScroll(event: any): void {
         this.checkElementsVisibility()
+    }
+
+    onImageClick(id: number, imageIndex: number) {
+        console.log(id);
+        this.selectedProject = this.Projects.find(p => p.Id == id)!;
+        this.selectedProjectIndex = imageIndex;
+    }
+
+    @HostListener('document:keydown', ['$event'])
+    handleKeyboardEvent(event: KeyboardEvent) {
+        if (event.key === 'ArrowRight') {
+            this.nextImage();
+        } else if (event.key === 'ArrowLeft') {
+            this.previousImage();
+        }
+    }
+
+    nextImage() {
+        if (this.selectedProjectIndex < this.selectedProject.Images.length - 1) {
+            this.selectedProjectIndex = this.selectedProjectIndex + 1;
+        } else {
+            this.selectedProjectIndex = 0;
+        }
+    }
+
+    previousImage() {
+        if (this.selectedProjectIndex > 0) {
+            this.selectedProjectIndex--;
+        } else {
+            this.selectedProjectIndex = this.selectedProject.Images.length - 1;
+        }
+    }
+
+    onGoToImage(imageIndex: number) {
+        this.selectedProjectIndex = imageIndex;
     }
 }
