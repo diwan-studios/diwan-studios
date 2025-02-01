@@ -40,7 +40,7 @@ export class AppComponent {
     this.ScrollUpSub();
     this.CheckIOS();
     // this.loadImages();
-    this.SetMetaData();
+    // this.SetMetaData();
   }
 
   images: string[] = [

@@ -13,8 +13,9 @@ $side-transition: all 0.2s ease-in;
 		top: var(--header-height);
 		min-width: 260px;
 		padding-left: 15px;
-		height: 100vh;
+		height: calc(100vh - var(--header-height));
 		background-color: #191919;
+		overflow-y: auto;
 
 		.input-group {
 			input {
@@ -73,6 +74,7 @@ $side-transition: all 0.2s ease-in;
 					-webkit-tap-highlight-color: transparent;
 					span {
 						margin-inline-start: 5px;
+						min-width: max-content;
 					}
 					i {
 						margin-right: 5px;
@@ -115,7 +117,6 @@ $side-transition: all 0.2s ease-in;
 			width: 100%;
 			border-bottom: 1px solid white;
 			.sub-title {
-				max-width: 500px;
 				margin-top: 10px;
 				width: 90%;
 			}
@@ -203,7 +204,7 @@ $side-transition: all 0.2s ease-in;
 .modal {
 	color: var(--gold1);
 	.modal-dialog {
-		max-width: 90%;
+		max-width: 100%;
 		justify-content: center;
 		.modal-content {
 			background-color: var(--primary-color2);
@@ -213,6 +214,7 @@ $side-transition: all 0.2s ease-in;
 
 				.img-modal {
 					max-height: 65vh;
+					max-width: 100%;
 				}
 			}
 			.modal-header,
