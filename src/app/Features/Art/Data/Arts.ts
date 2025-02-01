@@ -323,6 +323,15 @@ export const ArtProjects: ArtProjectItem[] = [
         Location: 'Egypt',
         Images: [
             'assets/Images/Projects/kansas/kansas1.webp',
+            'assets/Images/Projects/kansas/kansas2.webp',
+            'assets/Images/Projects/kansas/kansas3.webp',
+            'assets/Images/Projects/kansas/kansas4.webp',
+            'assets/Images/Projects/kansas/kansas5.webp',
+            'assets/Images/Projects/kansas/kansas6.webp',
+            'assets/Images/Projects/kansas/kansas7.webp',
+            'assets/Images/Projects/kansas/kansas8.webp',
+            'assets/Images/Projects/kansas/kansas9.webp',
+            'assets/Images/Projects/kansas/kansas10.webp',
         ],
         CategoryName: 'Restaurants'
     },
