@@ -225,12 +225,12 @@ export const ArtProjects: ArtProjectItem[] = [
         Description: `Our mural at Let’s JJ’S in The Hub Marassi a vibrant celebration of summer. Inspired by the season's energy, this design bursts with lively colors, bold  patterns, and playful elements that capture the essence of sunny days by the beach. From the glowing hues of sunrise to the refreshing blues of the sea, the artwork creates an immersive, uplifting atmosphere that invites everyone to feel  the warmth and joy of summer. This mural isn’t just a backdrop—it’s a vibe, a mood, and a statement, perfectly complementing the dynamic energy of JJ’S. Whether you're grabbing a  drink, snapping a photo, or soaking in the ambiance, this design adds a splash of happiness to your summer experience.`,
         Location: 'Egypt',
         Images: [
-            'assets/Images/Projects/jj/jj1.webp',
-            'assets/Images/Projects/jj/jj2.webp',
-            'assets/Images/Projects/jj/jj3.webp',
-            'assets/Images/Projects/jj/jj4.webp',
-            'assets/Images/Projects/jj/jj5.webp',
-            'assets/Images/Projects/jj/jj6.webp',
+            'assets/Images/Projects/jj/jj1.jpg',
+            'assets/Images/Projects/jj/jj2.jpg',
+            'assets/Images/Projects/jj/jj3.jpg',
+            'assets/Images/Projects/jj/jj4.jpg',
+            'assets/Images/Projects/jj/jj5.jpg',
+            'assets/Images/Projects/jj/jj6.jpg',
         ],
         CategoryName: 'Restaurants'
     },
@@ -329,9 +329,9 @@ export const ArtProjects: ArtProjectItem[] = [
         Description: `Creating a design that reflects the powerful fusion of athletic performance and Tunisian culture. Drawing inspiration from the iconic Adidas superstarsneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of Tunisia heritage and urban life.The mural represents the dynamic energy of both the global Adidas brand and the rich history of Tunisian streets, showcasing the timeless connection between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and through the cultural flow of Tunisian vibrant urban landscapThis project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas fans and those who appreciate Tunisia unique artistic and street culture.`,
         Location: 'Egypt',
         Images: [
-            'assets/Images/Projects/Adidas_MOEG1/Adidas_MOEG1.webp',
-            'assets/Images/Projects/Adidas_MOEG1/Adidas_MOEG2.webp',
-            'assets/Images/Projects/Adidas_MOEG1/Adidas_MOEG3.webp',
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG1.webp',
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG2.webp',
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG3.webp',
         ],
         CategoryName: 'Showrooms'
     },
@@ -455,8 +455,6 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/laMaison_/lamaison2.webp',
             'assets/Images/Projects/laMaison_/lamaison3.webp',
             'assets/Images/Projects/laMaison_/lamaison4.webp',
-            'assets/Images/Projects/laMaison_/lamaison5.webp',
-            'assets/Images/Projects/laMaison_/lamaison6.webp'
         ],
         CategoryName: 'Productions'
     },
@@ -499,7 +497,7 @@ export const ArtCategories: ArtCategory[] = [
     { Name: 'Malls', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Malls') },
     { Name: 'Showrooms', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Showrooms') },
     { Name: 'Activations', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activations') },
-    { Name: 'Entertainment', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Entertainments') },
+    { Name: 'Entertainment', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Entertainment') },
     { Name: 'Productions', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Productions') },
 ];
 
