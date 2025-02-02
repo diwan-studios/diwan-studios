@@ -61,18 +61,19 @@
 		</div>
 	</aside>
 	<div class="page-section art-div">
-		<div class="category" *ngFor="let category of Categories" [id]="category.Name.replace(regex, '').trim().toLowerCase()">
-			<div *ngFor="let project of category.ProjectItem" class="projects" [id]="project.Name.replace(regex, '').trim().toLowerCase()">
-				<h1 class="title gold-text">{{project.Name}}</h1>
-				<p class="sub-title">{{project.Description}}</p>
-				<div class="images">
-					<div class="hoverable-img-item art-transition" *ngFor="let img of project.Images; let i = index">
-						<img class="img" [src]="img" data-bs-toggle="modal" data-bs-target="#projectModal" (click)="onImageClick(project.Id, i)" />
+		<ng-container *ngFor="let category of Categories;let i = index">
+			<div class="category" *ngIf="i!=7" [id]="category.Name.replace(regex, '').trim().toLowerCase()">
+				<div *ngFor="let project of category.ProjectItem" class="projects" [id]="project.Name.replace(regex, '').trim().toLowerCase()">
+					<h1 class="title gold-text">{{project.Name}}</h1>
+					<p class="sub-title">{{project.Description}}</p>
+					<div class="images">
+						<div class="hoverable-img-item art-transition" *ngFor="let img of project.Images; let i = index">
+							<img class="img" [src]="img" data-bs-toggle="modal" data-bs-target="#projectModal" (click)="onImageClick(project.Id, i)" />
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
+		</ng-container>
 		<div class="category more-projects worldwide" id="worldwide">
 			<h1 class="title gold-text">World wide Projects</h1>
 			<p class="sub-title">For More Projects By Amr Diwan</p>
