@@ -47,7 +47,7 @@
 								<a
 									(click)="closemenu()"
 									class="nav-link d-inline"
-									[routerLink]="[RoutePaths.ArtWorks]+'/'+category.Name.replace('&','and').replace(regex,'').trim() "
+									[routerLink]="[RoutePaths.ArtWorks]+'/'+category.Link"
 									data-bs-toggle="collapse">
 									{{category.Name}}
 								</a>

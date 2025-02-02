@@ -522,6 +522,7 @@ ArtProjects.forEach(project => {
     project.Link = `${RoutePaths.ArtWorks}/${project.CategoryName?.replace('&', 'and').replace(regex, '').toLowerCase().trim()}/${project.Name.replace(regex, '').toLowerCase().trim()}`;
 });
 
+
 export const ArtCategories: ArtCategory[] = [
     // { Name: 'Commercial', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Commercial') },
     {
@@ -580,6 +581,14 @@ export const ArtCategories: ArtCategory[] = [
         Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
         Link: 'productions',
     },
+    {
+        Name: 'World wide',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'worldwide'),
+        ImgSrc: 'assets/Images/Diwan-categories/category-8.webp',
+        ImgAlt: '',
+        Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
+        Link: 'worldwide',
+    },
 ];
 
 
@@ -592,7 +601,7 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/fifa.webp',
         ],
-        Link: 'artworks/fifa'
+        Link: 'artworks/fifa',
     },
     {
         Id: 2,
