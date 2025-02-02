@@ -28,8 +28,7 @@
 							<!-- <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li> -->
 							<li>
 								<a
-									(click)="attachClickEventListeners(category.Name.replace(regex,'').trim().toLocaleUpperCase(), project.Name.replace(regex,'').trim().toLocaleUpperCase())"
-									href="javascript:void(0)"
+									[routerLink]="'/' +project.Link"
 									class="active gold-text nav-link px-0"
 									id="categories"
 									[attr.data-category]="category.Name.replace(regex,'').trim().toLocaleUpperCase()+'-'+project.Name.replace(regex,'').trim().toLocaleUpperCase()">

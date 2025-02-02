@@ -1,6 +1,12 @@
+import { RoutePaths } from "@App/Common/Settings/RoutePaths";
+
 export class ArtCategory {
     Name!: string;
-    ProjectItem!: ArtProjectItem[]
+    ProjectItem!: ArtProjectItem[];
+    ImgSrc!: string;
+    ImgAlt!: string;
+    Description!: string;
+    Link!: string;
 }
 
 export class ArtProjectItem {
@@ -12,7 +18,6 @@ export class ArtProjectItem {
     CategoryName?: string;
     Link?: string;
 }
-
 export const ArtProjects: ArtProjectItem[] = [
     {
         Id: 1,
@@ -512,17 +517,71 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Productions'
     }
 ];
+const regex = /['\s]/g;
+ArtProjects.forEach(project => {
+    project.Link = `${RoutePaths.ArtWorks}/${project.CategoryName?.replace('&', 'and').replace(regex, '').toLowerCase().trim()}/${project.Name.replace(regex, '').toLowerCase().trim()}`;
+});
 
 export const ArtCategories: ArtCategory[] = [
     // { Name: 'Commercial', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Commercial') },
-    { Name: 'Offices and factories', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Offices and factories') },
-    { Name: 'Restaurants', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Restaurants') },
-    { Name: 'Malls', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Malls') },
-    { Name: 'Showrooms', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Showrooms') },
-    { Name: 'Activations', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activations') },
-    { Name: 'Entertainment', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Entertainment') },
-    { Name: 'Productions', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Productions') },
+    {
+        Name: 'Offices and factories',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Offices and factories'),
+        ImgSrc: 'assets/Images/Diwan-categories/category-1.webp',
+        ImgAlt: '',
+        Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
+        Link: 'officesandfactories',
+    },
+    {
+        Name: 'Restaurants',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Restaurants'),
+        ImgSrc: 'assets/Images/Diwan-categories/category-2.webp',
+        ImgAlt: '',
+        Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
+        Link: 'restaurants',
+    },
+    {
+        Name: 'Malls',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Malls'),
+        ImgSrc: 'assets/Images/Diwan-categories/category-3.webp',
+        ImgAlt: '',
+        Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
+        Link: 'malls',
+    },
+    {
+        Name: 'Showrooms',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Showrooms'),
+        ImgSrc: 'assets/Images/Diwan-categories/category-4.webp',
+        ImgAlt: '',
+        Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
+        Link: 'showrooms',
+    },
+    {
+        Name: 'Activations',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activations'),
+        ImgSrc: 'assets/Images/Diwan-categories/category-5.webp',
+        ImgAlt: '',
+        Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
+        Link: 'activations',
+    },
+    {
+        Name: 'Entertainment',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Entertainment'),
+        ImgSrc: 'assets/Images/Diwan-categories/category-6.webp',
+        ImgAlt: '',
+        Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
+        Link: 'entertainment',
+    },
+    {
+        Name: 'Productions',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Productions'),
+        ImgSrc: 'assets/Images/Diwan-categories/category-7.webp',
+        ImgAlt: '',
+        Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
+        Link: 'productions',
+    },
 ];
+
 
 export const MoreArtProjects: ArtProjectItem[] = [
     {

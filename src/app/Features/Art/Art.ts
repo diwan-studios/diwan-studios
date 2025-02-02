@@ -231,13 +231,13 @@ export class ArtComponent {
 
     }
 
-    attachClickEventListeners(category: string, project: string) {
-        this.location.go('/artworks/' + category.replace(' ', '').trim().toLocaleLowerCase() + '/' + project.replace(' ', '').trim().toLocaleLowerCase());
-        const parent = this.el.nativeElement.querySelector(`.${category.replace(' ', '').trim().toLocaleUpperCase()}`)
-        const id = `#${project.replace(' ', '').trim().toLocaleUpperCase()}`;
-        const element = parent.querySelector(id)
-        this.scrollTo(element);
-    }
+    // attachClickEventListeners(category: string, project: string) {
+    //     this.location.go('/artworks/' + category.replace(' ', '').trim().toLocaleLowerCase() + '/' + project.replace(' ', '').trim().toLocaleLowerCase());
+    //     const parent = this.el.nativeElement.querySelector(`.${category.replace(' ', '').trim().toLocaleUpperCase()}`)
+    //     const id = `#${project.replace(' ', '').trim().toLocaleUpperCase()}`;
+    //     const element = parent.querySelector(id)
+    //     this.scrollTo(element);
+    // }
 
     GotoMoreProjects() {
         this.location.go('/artworks/moreprojects');

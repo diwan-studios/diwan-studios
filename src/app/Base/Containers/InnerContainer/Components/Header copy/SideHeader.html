@@ -47,13 +47,13 @@
 								<a
 									(click)="closemenu()"
 									class="nav-link d-inline"
-									[routerLink]="[RoutePaths.ArtWorks]+'/'+category.Title.replace('&','and').replace(regex,'').trim() "
+									[routerLink]="[RoutePaths.ArtWorks]+'/'+category.Name.replace('&','and').replace(regex,'').trim() "
 									data-bs-toggle="collapse">
-									{{category.Title}}
+									{{category.Name}}
 								</a>
 								<div class="art-categories dropdown-menu child-menu" attr.aria-labelledby="dropdownMenu{{i}}">
-									<ng-container *ngFor="let link of category.Links; index as i">
-										<a (click)="closemenu()" class="nav-link" *ngIf="i<4" [routerLink]="link.Link"> {{link.Title}}</a>
+									<ng-container *ngFor="let link of category.ProjectItem; index as i">
+										<a (click)="closemenu()" class="nav-link" [routerLink]="link.Link"> {{link.Name}}</a>
 									</ng-container>
 								</div>
 							</div>

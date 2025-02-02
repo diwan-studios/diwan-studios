@@ -6,10 +6,10 @@ import { Router, RouterModule } from '@angular/router';
 import { CarouselComponent } from '@App/Common/Widgets/Carousel/Carousel';
 import { PartnerItem, Partners } from './Data/Partners';
 import { Stats, StatsItem } from './Data/Stats';
-import { Categories, CategoryItem } from './Data/Categories';
 import { ValueItem, Values } from './Data/Values';
 import { LandingCarouselComponent } from '@App/Common/Widgets/LandingCarousel/LandingCarousel';
 import { AppConfig } from '@App/Base/AppConfig';
+import { ArtCategories, ArtCategory } from '../Art/Data/Arts';
 
 @Component({
 	standalone: true,
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
 	Stats: StatsItem[] = Stats;
 	Values: ValueItem[] = Values;
-	Categories: CategoryItem[] = Categories;
+	Categories: ArtCategory[] = ArtCategories;
 	Partners: PartnerItem[] = Partners;
 	PartnersImages: string[] = Partners.map(p => p.ImgSrc);
 	PortfolioLink!: string;
