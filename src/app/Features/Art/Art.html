@@ -1,6 +1,6 @@
 <div class="page-inner">
 	<aside>
-		<div class="input-group mb-3 mt-3">
+		<!-- <div class="input-group mb-3 mt-3">
 			<input
 				type="text"
 				class="gold-text"
@@ -10,29 +10,29 @@
 				aria-describedby="basic-addon1"
 				(input)="Search()" />
 			<i class="fa fa-search input-group-text gold-text" id="basic-addon1"></i>
-		</div>
+		</div> -->
 
 		<div *ngFor="let category of Categories;let i = index">
-			<ul class="list-unstyled m-0 ps-0">
-				<li class="category">
+			<ul *ngIf="i!=7" class="list-unstyled m-0 ps-0">
+				<li class="categorymenu">
 					<button
 						class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed gold-text"
 						data-bs-toggle="collapse"
-						[attr.data-bs-target]="'#' + category.Name.replace(regex,'').trim() + '-collapse'"
+						[attr.data-bs-target]="'#' + category.Name.replace(regex,'').trim().toLowerCase() + '-collapse'"
 						aria-expanded="false">
 						<img src="assets/Logos/arrowExpand.png" />
 						{{category.Name}}
 					</button>
-					<div class="collapse project-list" [attr.id]="category.Name.replace(regex,'').trim() 	+ '-collapse'">
+					<div class="collapse project-list" [attr.id]="category.Name.replace(regex,'').trim().toLowerCase() 	+ '-collapse'">
 						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" *ngFor="let project of category.ProjectItem;let i = index">
 							<!-- <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li> -->
 							<li>
 								<a
-									(click)="attachClickEventListeners(category.Name.replace(regex,'').trim().toLocaleUpperCase(), project.Name.replace(regex,'').trim().toLocaleUpperCase())"
+									(click)="attachClickEventListeners(project.Link!)"
 									href="javascript:void(0)"
 									class="active gold-text nav-link px-0"
 									id="categories"
-									[attr.data-category]="category.Name.replace(regex,'').trim().toLocaleUpperCase()+'-'+project.Name.replace(regex,'').trim().toLocaleUpperCase()">
+									[attr.data-category]="category.Name.replace(regex,'').trim().toLowerCase()+'-'+project.Name.replace(regex,'').trim().toLowerCase()">
 									{{project.Name}}
 									<span>
 										<i class="fa fa-thumb-tack"></i>
@@ -48,12 +48,12 @@
 
 		<div>
 			<ul class="list-unstyled m-0 ps-0">
-				<li class="category more-projects">
+				<li class="categorymenu more-projects">
 					<button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed gold-text" aria-expanded="false">
 						<img src="assets/Logos/arrowExpand.png" />
-						<a href="javascript:void(0)" class="gold-text active MOREPROJECTS" (click)="GotoMoreProjects()">
+						<a [routerLink]="" class="gold-text active worldwide" (click)="GotoMoreProjects()">
 							<!-- <i class="fa fa-map-marker"></i> -->
-							More Projects...
+							World wide Projects
 						</a>
 					</button>
 				</li>
@@ -61,45 +61,23 @@
 		</div>
 	</aside>
 	<div class="page-section art-div">
-		<div
-			class="category"
-			*ngFor="let category of Categories;let i = index"
-			[id]="category.Name.replace(regex, '').trim().toLocaleUpperCase()"
-			[ngClass]="category.Name.replace(regex, '').trim().toLocaleUpperCase()">
-			<div *ngFor="let project of category.ProjectItem; let i = index" class="projects" [id]="project.Name.replace(regex, '').trim().toLocaleUpperCase()">
-				<h1 class="title gold-text">{{project.Name}}</h1>
-				<p class="sub-title">{{project.Description}}</p>
-				<div class="images">
-					<ng-container *ngFor="let img of project.Images; let j = index">
-						<div class="hoverable-img-item">
-							<img class="img" [src]="img" alt="" data-bs-toggle="modal" [attr.data-bs-target]="'#project-' + i + '-' + j" />
+		<ng-container *ngFor="let category of Categories;let i = index">
+			<div class="category" *ngIf="i!=7" [id]="category.Name.replace(regex, '').trim().toLowerCase()">
+				<div *ngFor="let project of category.ProjectItem" class="projects" [id]="project.Name.replace(regex, '').trim().toLowerCase()">
+					<h1 class="title gold-text">{{project.Name}}</h1>
+					<p class="sub-title">{{project.Description}}</p>
+					<div class="images">
+						<div class="hoverable-img-item art-transition" *ngFor="let img of project.Images; let i = index">
+							<img class="img" [src]="img" data-bs-toggle="modal" data-bs-target="#projectModal" (click)="onImageClick(project.Id, i)" />
 						</div>
-						<!-- Modal -->
-						<div class="modal fade" [id]="'project-' + i + '-' + j" tabindex="-1" aria-labelledby="projectLabel">
-							<div class="modal-dialog modal-dialog-centered">
-								<div class="modal-content" (click)="$event.stopPropagation()">
-									<div class="modal-header">
-										<h1 class="modal-title fs-5" id="projectLabel">{{project.Name}}</h1>
-										<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-									</div>
-									<div class="modal-body">
-										<img class="img-modal" [src]="img" alt="" />
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</ng-container>
+					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="category more-projects MOREPROJECTS">
-			<h1 class="title gold-text">More Projects</h1>
+		</ng-container>
+		<div class="category more-projects worldwide" id="worldwide">
+			<h1 class="title gold-text">World wide Projects</h1>
 			<p class="sub-title">For More Projects By Amr Diwan</p>
-			<div class="images" [id]="'MOREPROJECTS'">
+			<div class="images" [id]="'worldwide'">
 				<a
 					*ngFor="let project of MoreProjects; let i = index"
 					class="hoverable-img-item"
@@ -108,6 +86,37 @@
 					<img class="img" [src]="project.Images[0]" alt="project display image" />
 					<div class="visible">{{project.Name}}</div>
 				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectLabel">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content" (click)="$event.stopPropagation()" *ngIf="selectedProject">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="projectLabel">{{selectedProject.Name}}</h1>
+				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<img class="img-modal" [src]="selectedProject.Images[selectedProjectIndex]" />
+				<div class="indicators">
+					<button class="arrow prev" (click)="previousImage()">
+						<i class="fa fa-chevron-left"></i>
+					</button>
+					<div
+						class="indicator"
+						*ngFor="let image of selectedProject.Images; let i = index"
+						[class.active]="i === selectedProjectIndex"
+						(click)="onGoToImage(i)"></div>
+					<button class="arrow next" (click)="nextImage()">
+						<i class="fa fa-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>

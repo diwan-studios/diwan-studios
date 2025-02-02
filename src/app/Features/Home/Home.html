@@ -28,8 +28,10 @@
 			<h3>Who we are</h3>
 			<h4 class="gold-text">Break the rules.</h4>
 			<p class="text-start">
-				<strong>Diwan studios</strong> combines the concepts of <strong>graffiti</strong> and <strong>architecture</strong> design elements. <br />
-				<small>we guarantee high quality personalized designs that will bring your brand to life.</small>
+				<!-- <strong>Diwan studios</strong> combines the concepts of <strong>graffiti</strong> and <strong>architecture</strong> design elements. <br />
+				<small>we guarantee high quality personalized designs that will bring your brand to life.</small> -->
+				At Diwan Studios, we push boundaries with bold, graffiti-inspired designs. Our high-quality, personalized artwork transforms spaces and brings
+				brand to life with creativity and authenticity.
 			</p>
 		</div>
 		<div class="tab-content">
@@ -37,7 +39,7 @@
 				<div *ngFor="let stat of Stats; let i = index" class="stat" [ngClass]="{'stat-clickable': stat.Link}" (click)="GotoStat(stat.Link)">
 					<div
 						class="number"
-						[ngClass]="{'bg': i != 4,'meters': i == 3 }"
+						[ngClass]="{'bg': i != 2,'meters': i == 3 }"
 						[id]="i"
 						[attr.number]="stat.Number"
 						[attr.timeinterval]="stat.TimeInterval"></div>
@@ -70,9 +72,9 @@
 					<div class="category" *ngFor="let category of Categories; index as i">
 						<img [src]="category.ImgSrc" [alt]="category.ImgAlt" class="img" />
 						<div class="category-description">
-							<h1>{{category.Title}}</h1>
+							<!-- <h1>{{category.Title}}</h1> -->
 							<!-- <h5>{{category.Description}}</h5> -->
-							<a class="btn btn-primary" [routerLink]="'/'+ RoutePaths.ArtWorks + '/' + category.Link">Learn More</a>
+							<a class="btn btn-primary" [routerLink]="'/'+ RoutePaths.ArtWorks + '/' + category.Link">{{category.Name}}</a>
 						</div>
 					</div>
 				</div>
@@ -83,10 +85,13 @@
 					<div class="own-description">
 						<!-- Content for left section -->
 						<h1 class="gold-text">Our Projects</h1>
-						<h4>Categories</h4>
+						<!-- <h4>Categories</h4> -->
 						<p>
-							When it comes to "wall art" Diwan Studio takes graffiti to a whole different level. There's more to it than just spray painting to a
-							wall, it's a documentation of culture and history that together represent individuality and personality.
+							<!-- When it comes to "wall art" Diwan Studio takes graffiti to a whole different level. There's more to it than just spray painting to a
+							wall, it's a documentation of culture and history that together represent individuality and personality. -->
+							At Diwan Studios, we elevate "wall art" to an entirely new level. It's not just about spray painting a wall—it's a dynamic
+							documentation of culture and history that, together, embody individuality and personality. Each project is a unique expression that
+							leaves a lasting impression, telling stories through vibrant and meaningful art.
 							<!-- <a class="" [routerLink]="'/'+ RoutePaths.About">Portfolio</a> -->
 						</p>
 
@@ -108,9 +113,10 @@
 
 	<section class="page-section no-min partners">
 		<h1 class="gold-text">Clients</h1>
-		<div class="tab-content">
+		<!-- <div class="tab-content">
 			<app-Carousel [Images]="PartnersImages"></app-Carousel>
-		</div>
+		</div> -->
+		<img src="assets/Images/our-clients.jpg" alt="our clients" />
 	</section>
 </div>
 <!-- </div> -->

@@ -26,6 +26,8 @@ export class ArtComponent {
     Projects: ArtProjectItem[] = ArtProjects;
     filteredProjects: ArtProjectItem[];
     project: string = '';
+    selectedProject!: ArtProjectItem;
+    selectedProjectIndex: number = 0;
 
     Categories: ArtCategory[] = ArtCategories;
     MoreProjects: ArtProjectItem[] = MoreArtProjects;
@@ -60,20 +62,20 @@ export class ArtComponent {
 
             if (!this.category) { this.checkElementsVisibility(); return }
             if (!this.project) {
-                const parent = this.el.nativeElement.querySelector(`.${this.category.replace(' ', '').trim().toLocaleUpperCase()}`)
+                const parent = this.el.nativeElement.querySelector(`#${this.category}`)
                 setTimeout(() => {
                     this.scrollTo(parent);
                 }, 100);
                 return
             }
-            const parent = this.el.nativeElement.querySelector(`.${this.category.replace(' ', '').trim().toLocaleUpperCase()}`)
-            const element = parent.querySelector(`#${this.project.replace(' ', '').trim().toLocaleUpperCase()}`)
+            const parent = this.el.nativeElement.querySelector(`#${this.category}`)
+            const element = parent.querySelector(`#${this.project}`)
             setTimeout(() => {
                 this.scrollTo(element);
             }, 100);
         });
 
-        this.Animation.Arts();
+        // this.Animation.Arts();
     }
 
     Animation = {
@@ -123,6 +125,7 @@ export class ArtComponent {
         rootMargin: '10px',
         threshold: 0.1,
     };
+
     private checkElementsVisibility() {
         const categoryElements = this.el.nativeElement.querySelectorAll('.category');
 
@@ -131,13 +134,13 @@ export class ArtComponent {
             const rectt = categoryElement.getBoundingClientRect();
             if (!(rectt.top <= 100 && rectt.bottom > 100)) {
                 if (category != null) {
-                    var button = document.querySelector('[data-bs-target="#' + category.trim().replace(' ', '').charAt(0).toUpperCase() + category.trim().replace(' ', '').slice(1).toLowerCase() + '-collapse"]');
+                    var button = document.querySelector('[data-bs-target="#' + category + '-collapse"]');
                     if (button) {
                         this.renderer.removeStyle(button, 'font-weight');
                         button?.setAttribute('aria-expanded', 'false');
                         button?.classList.add('collapsed');
                     }
-                    const ParentDev = document.querySelector('.collapse#' + category.charAt(0).toUpperCase() + category.slice(1).toLowerCase() + '-collapse') as HTMLElement;
+                    const ParentDev = document.querySelector('.collapse#' + category + '-collapse') as HTMLElement;
                     ParentDev?.classList.remove('show');
 
                 }
@@ -152,13 +155,13 @@ export class ArtComponent {
                 if (rect.top <= 400 && rect.bottom > 400) {
                     this.renderer.addClass(categoryAnchor, 'active');
                     if (category != null) {
-                        var button = document.querySelector('[data-bs-target="#' + category.trim().replace(' ', '').charAt(0).toUpperCase() + category.trim().replace(' ', '').slice(1).toLowerCase() + '-collapse"]');
+                        var button = document.querySelector('[data-bs-target="#' + category + '-collapse"]');
                         if (button) {
                             this.renderer.setStyle(button, 'font-weight', 'bold');
                             button?.setAttribute('aria-expanded', 'true');
                             button?.classList.remove('collapsed');
                         }
-                        const ParentDev = document.querySelector('.collapse#' + category.charAt(0).toUpperCase() + category.slice(1).toLowerCase() + '-collapse') as HTMLElement;
+                        const ParentDev = document.querySelector('.collapse#' + category + '-collapse') as HTMLElement;
                         ParentDev?.classList.add('show');
 
                     }
@@ -168,19 +171,6 @@ export class ArtComponent {
                             entries.forEach((entry) => {
                                 if (entry.isIntersecting) {
                                     const imgFluidElements = projectElement.querySelectorAll('.img');
-                                    // animate(
-                                    //     imgFluidElements,
-                                    //     {
-                                    //         opacity: [0, 0.5, 1],
-                                    //         y: [15, 0],
-                                    //     },
-                                    //     {
-                                    //         delay: stagger(0.05),
-                                    //         duration: 0.6,
-                                    //         easing: ['ease-in-out'],
-                                    //     }
-                                    // );
-
                                     observerprojects.disconnect();
                                     this.animatedSections.add(category + '-' + project);
                                 }
@@ -197,8 +187,8 @@ export class ArtComponent {
         });
     }
 
-
     Search() {
+        debugger
         this.animatedSections.clear();
         if (this.SearchText.trim() === '') {
             this.filteredProjects = this.Projects;
@@ -209,7 +199,7 @@ export class ArtComponent {
                 category.Name.toLowerCase().includes(this.SearchText.trim().toLowerCase())
                 || category.Description.toLowerCase().includes(this.SearchText.trim().toLowerCase())
             );
-            const menulink = this.el.nativeElement.querySelector('.' + this.filteredProjects[0].Name)
+            const menulink = this.el.nativeElement.querySelector('#' + this.filteredProjects[0].Name.replace(this.regex, '').toLowerCase())
             this.activetab(menulink)
         }
 
@@ -228,18 +218,17 @@ export class ArtComponent {
 
     }
 
-    attachClickEventListeners(category: string, project: string) {
-        debugger
-        this.location.go('/artworks/' + category.replace(' ', '').trim().toLocaleLowerCase() + '/' + project.replace(' ', '').trim().toLocaleLowerCase());
-        const parent = this.el.nativeElement.querySelector(`.${category.replace(' ', '').trim().toLocaleUpperCase()}`)
-        const id = `#${project.replace(' ', '').trim().toLocaleUpperCase()}`;
-        const element = parent.querySelector(id)
+    attachClickEventListeners(link: string) {
+        this.location.go(link);
+        const parent = this.el.nativeElement.querySelector(`#${link.split('/')[1]}`);
+        const id = `#${link.split('/')[2]}`;
+        const element = parent.querySelector(id);
         this.scrollTo(element);
     }
 
     GotoMoreProjects() {
-        this.location.go('/artworks/moreprojects');
-        const element = document.querySelector('#MOREPROJECTS')!;
+        this.location.go('/artworks/worldwide');
+        const element = document.querySelector('#worldwide')!;
         this.scrollTo(element as any);
 
     }
@@ -259,4 +248,41 @@ export class ArtComponent {
     onScroll(event: any): void {
         this.checkElementsVisibility()
     }
+
+    //#region images modal and navigating
+    onImageClick(id: number, imageIndex: number) {
+        console.log(id);
+        this.selectedProject = this.Projects.find(p => p.Id == id)!;
+        this.selectedProjectIndex = imageIndex;
+    }
+
+    @HostListener('document:keydown', ['$event'])
+    handleKeyboardEvent(event: KeyboardEvent) {
+        if (event.key === 'ArrowRight') {
+            this.nextImage();
+        } else if (event.key === 'ArrowLeft') {
+            this.previousImage();
+        }
+    }
+
+    nextImage() {
+        if (this.selectedProjectIndex < this.selectedProject.Images.length - 1) {
+            this.selectedProjectIndex = this.selectedProjectIndex + 1;
+        } else {
+            this.selectedProjectIndex = 0;
+        }
+    }
+
+    previousImage() {
+        if (this.selectedProjectIndex > 0) {
+            this.selectedProjectIndex--;
+        } else {
+            this.selectedProjectIndex = this.selectedProject.Images.length - 1;
+        }
+    }
+
+    onGoToImage(imageIndex: number) {
+        this.selectedProjectIndex = imageIndex;
+    }
+    //#endregion
 }

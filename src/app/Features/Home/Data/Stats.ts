@@ -29,24 +29,24 @@ export const Stats: StatsItem[] = [
         Link: '',
         TimeInterval: 40
     },
-    {
-        ImgSrc: '',
-        ImgAlt: '',
-        Title: 'Countries',
-        Number: '5+',
-        Description: '',
-        Link: '',
-        TimeInterval: 300
-    },
-    {
-        ImgSrc: '',
-        ImgAlt: '',
-        Title: 'Meters',
-        Number: '6000+',
-        Description: '',
-        Link: '',
-        TimeInterval: 25
-    },
+    // {
+    //     ImgSrc: '',
+    //     ImgAlt: '',
+    //     Title: 'Countries',
+    //     Number: '5+',
+    //     Description: '',
+    //     Link: '',
+    //     TimeInterval: 300
+    // },
+    // {
+    //     ImgSrc: '',
+    //     ImgAlt: '',
+    //     Title: 'Meters',
+    //     Number: '6000+',
+    //     Description: '',
+    //     Link: '',
+    //     TimeInterval: 25
+    // },
     {
         ImgSrc: '',
         ImgAlt: '',
