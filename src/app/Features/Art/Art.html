@@ -70,7 +70,7 @@
 				<h1 class="title gold-text">{{project.Name}}</h1>
 				<p class="sub-title">{{project.Description}}</p>
 				<div class="images">
-					<div class="hoverable-img-item" *ngFor="let img of project.Images; let i = index">
+					<div class="hoverable-img-item art-transition" *ngFor="let img of project.Images; let i = index">
 						<img class="img" [src]="img" data-bs-toggle="modal" data-bs-target="#projectModal" (click)="onImageClick(project.Id, i)" />
 					</div>
 				</div>

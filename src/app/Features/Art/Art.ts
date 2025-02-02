@@ -75,7 +75,7 @@ export class ArtComponent {
             }, 100);
         });
 
-        this.Animation.Arts();
+        // this.Animation.Arts();
     }
 
     Animation = {

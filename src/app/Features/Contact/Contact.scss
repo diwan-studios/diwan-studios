@@ -25,6 +25,10 @@ $transition: all 0.6s ease-in;
 			transform: translateY(20px);
 			transition: $transition;
 
+			h1 {
+				margin-bottom: 24px !important;
+			}
+
 			&.content-transition {
 				opacity: 1;
 				transform: translateY(0px);
@@ -51,14 +55,30 @@ $transition: all 0.6s ease-in;
 
 			.social {
 				// text-align: center;
+				display: flex;
+				flex-direction: column;
 				a {
 					i {
 						font-size: 40px;
 					}
-					padding: 0 10px;
-					color: $font-color-secondary;
+					font-size: 24px;
+					margin: 0 10px;
+					color: var(--gold2);
+					text-decoration: none;
+					min-width: max-content;
+					display: inline-block;
+
 					&:hover {
 						color: $font-color;
+					}
+				}
+
+				@media (max-width: 576px) {
+					a {
+						i {
+							font-size: 30px;
+						}
+						width: 40px;
 					}
 				}
 			}
