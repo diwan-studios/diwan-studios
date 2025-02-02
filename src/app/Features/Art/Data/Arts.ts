@@ -390,7 +390,18 @@ export const ArtProjects: ArtProjectItem[] = [
         Description: `For Strikers Bowling Center, we had the opportunity to completely transform the interior of the space, spanning approximately 700 m², with our  dynamic and bold artwork. Our goal was to create an engaging and energetic environment that enhanced the excitement of the bowling experience. The artwork integrated a mix of normal and fluorescent paints, bringing the space to life with vibrant colors that pop under different lighting conditions. In addition to the murals, we designed and implemented a variety of visual elements including floor graphics, neon signage, posters, frames, and wallpaper. These details worked together to create a cohesive, immersive atmosphere that envelops guests from the moment they enter. This project not only transformed the visual appeal of the center but also contributed to an energized environment, making Strikers Bowling Center a  standout location for entertainment and fun.`,
         Location: 'Egypt',
         Images: [
-
+            // 'assets/Images/Projects/strikers/strikers1.webp',
+            // 'assets/Images/Projects/strikers/strikers2.webp',
+            // 'assets/Images/Projects/strikers/strikers3.webp',
+            // 'assets/Images/Projects/strikers/strikers4.webp',
+            // 'assets/Images/Projects/strikers/strikers5.webp',
+            // 'assets/Images/Projects/strikers/strikers6.webp',
+            // 'assets/Images/Projects/strikers/strikers7.webp',
+            // 'assets/Images/Projects/strikers/strikers8.webp',
+            // 'assets/Images/Projects/strikers/strikers9.webp',
+            // 'assets/Images/Projects/strikers/strikers10.webp',
+            // 'assets/Images/Projects/strikers/strikers11.webp',
+            // 'assets/Images/Projects/strikers/strikers12.webp',
         ],
         CategoryName: 'Entertainment'
     },
@@ -419,17 +430,29 @@ export const ArtProjects: ArtProjectItem[] = [
 
 
     {
-        Id: 26,
+        Id: 27,
         Name: 'Striker’s Bowling Center',
         Description: `We had the pleasure of transforming the interior of Strikers Bowling Center into a dynamic, high-energy space. Our design approach blended boldness  with creativity to create a memorable experience for visitors. Our contributions included: Neon Work: Eye-catching neon installations that added a vibrant and playful atmosphere, perfectly complementing the lively energy of the bowling  center. Frames Work: Carefully curated and framed artwork that resonated with the center's fun and energetic vibe, adding a personalized touch to various  areas of the venue. Printed Posters: High-quality, visually striking posters that helped reinforce the brand identity and energized the space, ensuring a visually cohesive  and engaging environment. Mega Signage: Large-scale signage that made a bold statement, ensuring easy navigation while elevating the overall aesthetic of the center. The combination of these elements contributed to a fresh, inviting, and exciting environment that perfectly matched the essence of Strikers Bowling  Center, ensuring both functionality and style were seamlessly integrated.`,
         Location: 'Egypt',
         Images: [
+            'assets/Images/Projects/strikers_/strikers1.webp',
+            'assets/Images/Projects/strikers_/strikers2.webp',
+            'assets/Images/Projects/strikers_/strikers3.webp',
+            'assets/Images/Projects/strikers_/strikers4.webp',
+            'assets/Images/Projects/strikers_/strikers5.webp',
+            'assets/Images/Projects/strikers_/strikers6.webp',
+            'assets/Images/Projects/strikers_/strikers7.webp',
+            'assets/Images/Projects/strikers_/strikers8.webp',
+            'assets/Images/Projects/strikers_/strikers9.webp',
+            'assets/Images/Projects/strikers_/strikers10.webp',
+            'assets/Images/Projects/strikers_/strikers11.webp',
+            'assets/Images/Projects/strikers_/strikers12.webp',
 
         ],
         CategoryName: 'Productions'
     },
     {
-        Id: 27,
+        Id: 28,
         Name: 'GTE Travel Solutions Company',
         Description: `We had the privilege of transforming the interior of GTE Traveling Solution Company, creating an atmosphere that reflects the company’s dynamic spirit and commitment to global travel. Our design solutions included: Paintings: Custom artwork that captured the essence of travel and adventure, infusing the space with inspiration and a sense of wanderlust. Acrylic Work: Modern acrylic installations that added depth and sophistication, enhancing the visual appeal and overall ambiance of the office. Wallpaper: Thoughtfully designed wallpaper that complemented the theme of exploration, bringing energy and creativity to various areas while  maintaining a professional and welcoming atmosphere. Our goal was to create a space that inspires both employees and clients, with a design that reflects the passion and excitement of the travel industry.`,
         Location: 'Egypt',
@@ -446,7 +469,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Productions'
     },
     {
-        Id: 28,
+        Id: 29,
         Name: 'La Maison Co-Working Space',
         Description: `We had the exciting opportunity to transform the interior of La Maison Co-Working Space, blending creativity with functionality. Our contributions  \nincluded:\n Wall Paper: Custom-designed wallpaper that added a modern touch to the space, creating a vibrant and welcoming environment for productivity and  collaboration. Frames Work: Carefully selected and framed artwork that complemented the space’s aesthetic, bringing personality and visual appeal to key areas. Acrylic Work: Sleek, contemporary acrylic installations that added a sophisticated and professional flair, enhancing both visual and spatial dynamics. Door Stickers: Unique door decals that provided clear, functional navigation while enhancing the overall design, adding a seamless flow throughout thw workspace. Our design approach for La Maison reflects our commitment to creating spaces that inspire and energize, with attention to detail in every element to ensure a harmonious atmosphere.`,
         Location: 'Egypt',
@@ -459,7 +482,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Productions'
     },
     {
-        Id: 29,
+        Id: 30,
         Name: 'Mylo',
         Description: `We had the opportunity to transform mylo Office into an inspiring and functional workspace. Our design solutions combined creativity and innovation to create a modern and engaging environment. Our contributions included: Paintings: Custom-designed artworks that added character and energy to the space, aligning with Mylo’s brand identity and fostering a productive  atmosphere. Acrylic Work: Sleek acrylic installations that brought a contemporary edge to the office, enhancing both visual appeal and the overall flow of the space. Wallpaper: Custom wallpaper designs that complemented the office's aesthetic, creating a cohesive and vibrant environment that encouraged creativity and collaboration. Stickers: Unique and functional wall stickers that helped define different zones within the office while adding visual interest to key areas. Frames: Carefully selected and framed art that highlighted Mylo’s brand message, adding style and sophistication to the office environment. Each element was thoughtfully integrated to elevate the overall office experience, creating a space that reflects Mylo’s innovative and dynamic approach to work.`,
         Location: 'Egypt',
@@ -472,7 +495,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Productions'
     },
     {
-        Id: 30,
+        Id: 31,
         Name: 'Seashell Villa',
         Description: `At Seashell Villa, we redefined the interior with a fusion of art and elegance. Our team at Diwan Studios enhanced the space through handcrafted acrylic paintings, adding depth and character to every corner. Complementing the artwork, a sleek metal handrail was integrated, bringing a modern  and sophisticated touch to the villa’s aesthetic. This project reflects our commitment to creating harmonious and visually striking spaces, where every detail tells a story of creativity and craftsmanship.`,
         Location: 'Egypt',
