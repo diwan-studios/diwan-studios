@@ -23,7 +23,7 @@ export class AppConfig {
     this.HttpClient.get<Env[]>('assets/Config/Env.json').subscribe(
       (envArray) => {
         this.env = envArray.find((env) => env.Web == this.hostname)!;
-        console.log('env: ', { ...this.env });
+        // console.log('env: ', { ...this.env });
         this.ApiUrl.next(this.env.ApiUrl);
       }
     );

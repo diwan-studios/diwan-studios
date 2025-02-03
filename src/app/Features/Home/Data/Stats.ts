@@ -15,7 +15,7 @@ export const Stats: StatsItem[] = [
         ImgSrc: '',
         ImgAlt: '',
         Title: 'Years Of Experience',
-        Number: '19+',
+        Number: '10+',
         Description: '',
         Link: '',
         TimeInterval: 100

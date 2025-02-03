@@ -94,13 +94,7 @@ export const ArtProjects: ArtProjectItem[] = [
         Location: 'Egypt',
         Images: [
             'assets/Images/Projects/GTE-OFFICE/gte1.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte2.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte3.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte4.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte5.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte6.webp',
             'assets/Images/Projects/GTE-OFFICE/gte7.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte8.webp',
         ],
         CategoryName: 'Offices and factories'
     },
@@ -118,19 +112,6 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/orange/orange6.webp',
             'assets/Images/Projects/orange/orange7.webp',
             'assets/Images/Projects/orange/orange8.webp',
-        ],
-        CategoryName: 'Offices and factories'
-    },
-    {
-        Id: 7,
-        Name: 'Mylo',
-        Description: 'For Mylo\'s office, we blended artwork with a variety of design elements, including custom wallpaper, acrylic paintings, stickers, and acrylic work Each piece was thoughtfully created to reflect the company\'s creative spirit and enhance the workspace. The combination of vibrant murals and high-quality materials not only adds a unique aesthetic to the environment but also fosters a positive and motivating atmosphere. This dynamic mix of ar forms helps make Mylo\'s office a place where creativity thrives and inspiration flows.',
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/Projects/mylo/mylo1.webp',
-            'assets/Images/Projects/mylo/mylo2.webp',
-            'assets/Images/Projects/mylo/mylo3.webp',
-            'assets/Images/Projects/mylo/mylo4.webp',
         ],
         CategoryName: 'Offices and factories'
     },
@@ -173,6 +154,14 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/taiyaki/taiyaki2.webp',
             'assets/Images/Projects/taiyaki/taiyaki3.webp',
             'assets/Images/Projects/taiyaki/taiyaki4.webp',
+            'assets/Images/Projects/taiyaki/taiyaki5.webp',
+            'assets/Images/Projects/taiyaki/taiyaki6.webp',
+            'assets/Images/Projects/taiyaki/taiyaki7.webp',
+            'assets/Images/Projects/taiyaki/taiyaki8.webp',
+            'assets/Images/Projects/taiyaki/taiyaki9.webp',
+            'assets/Images/Projects/taiyaki/taiyaki10.webp',
+            'assets/Images/Projects/taiyaki/taiyaki11.webp',
+            'assets/Images/Projects/taiyaki/taiyaki12.webp',
         ],
         CategoryName: 'Restaurants'
     },
@@ -185,6 +174,15 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/BUTCHER-BURGER/burcher1.webp',
             'assets/Images/Projects/BUTCHER-BURGER/burcher2.webp',
             'assets/Images/Projects/BUTCHER-BURGER/burcher3.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher4.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher5.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher6.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher7.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher8.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher9.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher10.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher11.webp',
+            'assets/Images/Projects/BUTCHER-BURGER/burcher12.webp',
         ],
         CategoryName: 'Restaurants'
     },
@@ -330,8 +328,8 @@ export const ArtProjects: ArtProjectItem[] = [
     },
     {
         Id: 20,
-        Name: 'Adidas Mall Of Tunisia',
-        Description: `Creating a design that reflects the powerful fusion of athletic performance and Tunisian culture. Drawing inspiration from the iconic Adidas superstarsneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of Tunisia heritage and urban life.The mural represents the dynamic energy of both the global Adidas brand and the rich history of Tunisian streets, showcasing the timeless connection between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and through the cultural flow of Tunisian vibrant urban landscapThis project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas fans and those who appreciate Tunisia unique artistic and street culture.`,
+        Name: 'Adidas Mall Of Egypt',
+        Description: `For the Adidas store in Mall of Egypt, we created a design that reflects the powerful fusion of athletic performance and Egyptian culture. Drawing inspiration from the iconic Adidas Ultraboost sneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of  Egyptian heritage and urban life. The mural represents the dynamic energy of both the global Adidas brand and the rich history of Egypt’s streets, showcasing the timeless connection  between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and  through the cultural flow of Egypt’s vibrant urban landscap This project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas  fans and those who appreciate Egypt’s unique artistic and street culture.`,
         Location: 'Egypt',
         Images: [
             'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG1.webp',
@@ -342,12 +340,11 @@ export const ArtProjects: ArtProjectItem[] = [
     },
     {
         Id: 21,
-        Name: 'Adidas Mall Of Egypt',
-        Description: `For the Adidas store in Mall of Egypt, we created a design that reflects the powerful fusion of athletic performance and Egyptian culture. Drawing inspiration from the iconic Adidas Ultraboost sneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of  Egyptian heritage and urban life. The mural represents the dynamic energy of both the global Adidas brand and the rich history of Egypt’s streets, showcasing the timeless connection  between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and  through the cultural flow of Egypt’s vibrant urban landscap This project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas  fans and those who appreciate Egypt’s unique artistic and street culture.`,
-        Location: 'Egypt',
+        Name: 'Adidas Mall Of Tunisia',
+        Description: `Creating a design that reflects the powerful fusion of athletic performance and Tunisian culture. Drawing inspiration from the iconic Adidas superstarsneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of Tunisia heritage and urban life.The mural represents the dynamic energy of both the global Adidas brand and the rich history of Tunisian streets, showcasing the timeless connection between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and through the cultural flow of Tunisian vibrant urban landscapThis project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas fans and those who appreciate Tunisia unique artistic and street culture.`,
+        Location: 'Tunisia',
         Images: [
             'assets/Images/Projects/Adidas_Tunisia/Adidas_Tunisia.webp',
-
         ],
         CategoryName: 'Showrooms'
     },
@@ -362,7 +359,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Opel/opel2.webp',
             'assets/Images/Projects/Opel/opel3.webp',
         ],
-        CategoryName: 'Activations'
+        CategoryName: 'Activation'
     },
     {
         Id: 23,
@@ -375,7 +372,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Yango-Play/yangoplay3.webp',
             'assets/Images/Projects/Yango-Play/yangoplay4.webp',
         ],
-        CategoryName: 'Activations'
+        CategoryName: 'Activation'
     },
     {
         Id: 24,
@@ -386,7 +383,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Oppo/oppo1.webp',
             'assets/Images/Projects/Oppo/oppo2.webp',
         ],
-        CategoryName: 'Activations'
+        CategoryName: 'Activation'
     },
 
     {
@@ -395,18 +392,31 @@ export const ArtProjects: ArtProjectItem[] = [
         Description: `For Strikers Bowling Center, we had the opportunity to completely transform the interior of the space, spanning approximately 700 m², with our  dynamic and bold artwork. Our goal was to create an engaging and energetic environment that enhanced the excitement of the bowling experience. The artwork integrated a mix of normal and fluorescent paints, bringing the space to life with vibrant colors that pop under different lighting conditions. In addition to the murals, we designed and implemented a variety of visual elements including floor graphics, neon signage, posters, frames, and wallpaper. These details worked together to create a cohesive, immersive atmosphere that envelops guests from the moment they enter. This project not only transformed the visual appeal of the center but also contributed to an energized environment, making Strikers Bowling Center a  standout location for entertainment and fun.`,
         Location: 'Egypt',
         Images: [
-            // 'assets/Images/Projects/strikers/strikers1.webp',
-            // 'assets/Images/Projects/strikers/strikers2.webp',
-            // 'assets/Images/Projects/strikers/strikers3.webp',
-            // 'assets/Images/Projects/strikers/strikers4.webp',
-            // 'assets/Images/Projects/strikers/strikers5.webp',
-            // 'assets/Images/Projects/strikers/strikers6.webp',
-            // 'assets/Images/Projects/strikers/strikers7.webp',
-            // 'assets/Images/Projects/strikers/strikers8.webp',
-            // 'assets/Images/Projects/strikers/strikers9.webp',
-            // 'assets/Images/Projects/strikers/strikers10.webp',
-            // 'assets/Images/Projects/strikers/strikers11.webp',
-            // 'assets/Images/Projects/strikers/strikers12.webp',
+            'assets/Images/Projects/strikers/strikers1.webp',
+            'assets/Images/Projects/strikers/strikers2.webp',
+            'assets/Images/Projects/strikers/strikers3.webp',
+            'assets/Images/Projects/strikers/strikers4.webp',
+            'assets/Images/Projects/strikers/strikers5.webp',
+            'assets/Images/Projects/strikers/strikers6.webp',
+            'assets/Images/Projects/strikers/strikers7.webp',
+            'assets/Images/Projects/strikers/strikers8.webp',
+            'assets/Images/Projects/strikers/strikers9.webp',
+            'assets/Images/Projects/strikers/strikers10.webp',
+            'assets/Images/Projects/strikers/strikers11.webp',
+            'assets/Images/Projects/strikers/strikers12.webp',
+            'assets/Images/Projects/strikers/strikers13.webp',
+            'assets/Images/Projects/strikers/strikers14.webp',
+            'assets/Images/Projects/strikers/strikers15.webp',
+            'assets/Images/Projects/strikers/strikers16.webp',
+            'assets/Images/Projects/strikers/strikers17.webp',
+            'assets/Images/Projects/strikers/strikers18.webp',
+            'assets/Images/Projects/strikers/strikers19.webp',
+            'assets/Images/Projects/strikers/strikers20.webp',
+            'assets/Images/Projects/strikers/strikers21.webp',
+            'assets/Images/Projects/strikers/strikers22.webp',
+            'assets/Images/Projects/strikers/strikers23.webp',
+            'assets/Images/Projects/strikers/strikers24.webp',
+            'assets/Images/Projects/strikers/strikers25.webp',
         ],
         CategoryName: 'Entertainment'
     },
@@ -454,7 +464,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/strikers_/strikers12.webp',
 
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     },
     {
         Id: 28,
@@ -462,16 +472,14 @@ export const ArtProjects: ArtProjectItem[] = [
         Description: `We had the privilege of transforming the interior of GTE Traveling Solution Company, creating an atmosphere that reflects the company’s dynamic spirit and commitment to global travel. Our design solutions included: Paintings: Custom artwork that captured the essence of travel and adventure, infusing the space with inspiration and a sense of wanderlust. Acrylic Work: Modern acrylic installations that added depth and sophistication, enhancing the visual appeal and overall ambiance of the office. Wallpaper: Thoughtfully designed wallpaper that complemented the theme of exploration, bringing energy and creativity to various areas while  maintaining a professional and welcoming atmosphere. Our goal was to create a space that inspires both employees and clients, with a design that reflects the passion and excitement of the travel industry.`,
         Location: 'Egypt',
         Images: [
-            'assets/Images/Projects/GTE-OFFICE/gte1.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte2.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte3.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte4.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte5.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte6.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte7.webp',
-            'assets/Images/Projects/GTE-OFFICE/gte8.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte2.webp',
+            // 'assets/Images/Projects/GTE-OFFICE_/gte3.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte4.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte5.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte6.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte8.webp',
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     },
     {
         Id: 29,
@@ -484,7 +492,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/laMaison_/lamaison3.webp',
             'assets/Images/Projects/laMaison_/lamaison4.webp',
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     },
     {
         Id: 30,
@@ -496,8 +504,15 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/mylo_/mylo2.webp',
             'assets/Images/Projects/mylo_/mylo3.webp',
             'assets/Images/Projects/mylo_/mylo4.webp',
+            'assets/Images/Projects/mylo_/mylo5.webp',
+            'assets/Images/Projects/mylo_/mylo6.webp',
+            'assets/Images/Projects/mylo_/mylo7.webp',
+            'assets/Images/Projects/mylo_/mylo8.webp',
+            'assets/Images/Projects/mylo_/mylo9.webp',
+            'assets/Images/Projects/mylo_/mylo10.webp',
+            'assets/Images/Projects/mylo_/mylo11.webp',
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     },
     {
         Id: 31,
@@ -514,7 +529,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/seashell/seashell7.webp',
 
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     }
 ];
 const regex = /['\s]/g;
@@ -558,12 +573,12 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'showrooms',
     },
     {
-        Name: 'Activations',
-        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activations'),
+        Name: 'Activation',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activation'),
         ImgSrc: 'assets/Images/Diwan-categories/category-5.webp',
         ImgAlt: '',
         Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
-        Link: 'activations',
+        Link: 'activation',
     },
     {
         Name: 'Entertainment',
@@ -574,12 +589,12 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'entertainment',
     },
     {
-        Name: 'Productions',
-        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Productions'),
+        Name: 'Production',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Production'),
         ImgSrc: 'assets/Images/Diwan-categories/category-7.webp',
         ImgAlt: '',
         Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
-        Link: 'productions',
+        Link: 'production',
     },
     {
         Name: 'World wide',

@@ -266,6 +266,10 @@ $side-transition: all 0.2s ease-in;
 						&:hover {
 							background-color: white;
 						}
+
+						@media (max-width: 576px) {
+							margin: 0 2px;
+						}
 					}
 				}
 			}
