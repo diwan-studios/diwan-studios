@@ -359,7 +359,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Opel/opel2.webp',
             'assets/Images/Projects/Opel/opel3.webp',
         ],
-        CategoryName: 'Activations'
+        CategoryName: 'Activation'
     },
     {
         Id: 23,
@@ -372,7 +372,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Yango-Play/yangoplay3.webp',
             'assets/Images/Projects/Yango-Play/yangoplay4.webp',
         ],
-        CategoryName: 'Activations'
+        CategoryName: 'Activation'
     },
     {
         Id: 24,
@@ -383,7 +383,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Oppo/oppo1.webp',
             'assets/Images/Projects/Oppo/oppo2.webp',
         ],
-        CategoryName: 'Activations'
+        CategoryName: 'Activation'
     },
 
     {
@@ -464,7 +464,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/strikers_/strikers12.webp',
 
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     },
     {
         Id: 28,
@@ -479,7 +479,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/GTE-OFFICE_/gte6.webp',
             'assets/Images/Projects/GTE-OFFICE_/gte8.webp',
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     },
     {
         Id: 29,
@@ -492,7 +492,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/laMaison_/lamaison3.webp',
             'assets/Images/Projects/laMaison_/lamaison4.webp',
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     },
     {
         Id: 30,
@@ -512,7 +512,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/mylo_/mylo10.webp',
             'assets/Images/Projects/mylo_/mylo11.webp',
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     },
     {
         Id: 31,
@@ -529,7 +529,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/seashell/seashell7.webp',
 
         ],
-        CategoryName: 'Productions'
+        CategoryName: 'Production'
     }
 ];
 const regex = /['\s]/g;
@@ -573,12 +573,12 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'showrooms',
     },
     {
-        Name: 'Activations',
-        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activations'),
+        Name: 'Activation',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activation'),
         ImgSrc: 'assets/Images/Diwan-categories/category-5.webp',
         ImgAlt: '',
         Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
-        Link: 'activations',
+        Link: 'activation',
     },
     {
         Name: 'Entertainment',
@@ -589,12 +589,12 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'entertainment',
     },
     {
-        Name: 'Productions',
-        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Productions'),
+        Name: 'Production',
+        ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Production'),
         ImgSrc: 'assets/Images/Diwan-categories/category-7.webp',
         ImgAlt: '',
         Description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nemo, ullam quis corporis officia sint fugit, tempora quidem libero.',
-        Link: 'productions',
+        Link: 'production',
     },
     {
         Name: 'World wide',
