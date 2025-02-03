@@ -1,6 +1,7 @@
 import { RoutePaths } from "@App/Common/Settings/RoutePaths";
 
 export class ArtCategory {
+    Id!: number;
     Name!: string;
     ProjectItem!: ArtProjectItem[];
     ImgSrc!: string;
@@ -11,6 +12,7 @@ export class ArtCategory {
 
 export class ArtProjectItem {
     Id!: number;
+    CategoryId!: number;
     Name!: string;
     Description!: string;
     Images!: string[];
@@ -39,6 +41,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/mondelez/mondelez12.webp',
             'assets/Images/Projects/mondelez/mondelez13.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -51,6 +54,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/CAREEM/careem2.webp',
             'assets/Images/Projects/CAREEM/careem3.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -71,6 +75,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Money-fellows/moneyfellow9.webp',
 
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -86,6 +91,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/vq/vq5.webp',
             'assets/Images/Projects/vq/vq6.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -97,6 +103,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/GTE-OFFICE/gte1.webp',
             'assets/Images/Projects/GTE-OFFICE/gte7.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -114,6 +121,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/orange/orange7.webp',
             'assets/Images/Projects/orange/orange8.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -129,6 +137,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/LaMaison/lamaison5.webp',
             'assets/Images/Projects/LaMaison/lamaison6.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
 
@@ -143,6 +152,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/BONITA/bonita3.webp',
             'assets/Images/Projects/BONITA/bonita4.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -164,6 +174,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/taiyaki/taiyaki11.webp',
             'assets/Images/Projects/taiyaki/taiyaki12.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -185,6 +196,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/BUTCHER-BURGER/burcher11.webp',
             'assets/Images/Projects/BUTCHER-BURGER/burcher12.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -204,6 +216,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/kansas/kansas9.webp',
             'assets/Images/Projects/kansas/kansas10.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -221,6 +234,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/MORI-SUSHI/MORI-SUSHI-7.webp',
             'assets/Images/Projects/MORI-SUSHI/MORI-SUSHI-8.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -236,6 +250,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/jj/jj5.jpg',
             'assets/Images/Projects/jj/jj6.jpg',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -248,6 +263,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/samiha/samiha2.webp',
             'assets/Images/Projects/samiha/samiha3.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
 
@@ -265,6 +281,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/rubix-park/rubix6.webp',
             'assets/Images/Projects/rubix-park/rubix7.webp',
         ],
+        CategoryId: 3,
         CategoryName: 'Malls'
     },
     {
@@ -289,6 +306,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Tio-Complex/TIO-14.webp',
             'assets/Images/Projects/Tio-Complex/TIO-15.webp',
         ],
+        CategoryId: 3,
         CategoryName: 'Malls'
     },
 
@@ -307,6 +325,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Pro-guys/pro7.webp',
             'assets/Images/Projects/Pro-guys/pro8.webp',
         ],
+        CategoryId: 4,
         CategoryName: 'Showrooms'
     },
     {
@@ -325,6 +344,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Seats/seats8.webp',
             'assets/Images/Projects/Seats/seats9.webp',
         ],
+        CategoryId: 4,
         CategoryName: 'Showrooms'
     },
     {
@@ -337,6 +357,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG2.webp',
             'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG3.webp',
         ],
+        CategoryId: 4,
         CategoryName: 'Showrooms'
     },
     {
@@ -347,6 +368,7 @@ export const ArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/Projects/Adidas_Tunisia/Adidas_Tunisia.webp',
         ],
+        CategoryId: 4,
         CategoryName: 'Showrooms'
     },
 
@@ -360,6 +382,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Opel/opel2.webp',
             'assets/Images/Projects/Opel/opel3.webp',
         ],
+        CategoryId: 5,
         CategoryName: 'Activation'
     },
     {
@@ -373,6 +396,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Yango-Play/yangoplay3.webp',
             'assets/Images/Projects/Yango-Play/yangoplay4.webp',
         ],
+        CategoryId: 5,
         CategoryName: 'Activation'
     },
     {
@@ -384,6 +408,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Oppo/oppo1.webp',
             'assets/Images/Projects/Oppo/oppo2.webp',
         ],
+        CategoryId: 5,
         CategoryName: 'Activation'
     },
 
@@ -419,6 +444,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/strikers/strikers24.webp',
             'assets/Images/Projects/strikers/strikers25.webp',
         ],
+        CategoryId: 6,
         CategoryName: 'Entertainment'
     },
     {
@@ -441,6 +467,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/lane9/lane11.webp',
             'assets/Images/Projects/lane9/lane12.webp',
         ],
+        CategoryId: 6,
         CategoryName: 'Entertainment'
     },
 
@@ -465,6 +492,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/strikers_/strikers12.webp',
 
         ],
+        CategoryId: 7,
         CategoryName: 'Production'
     },
     {
@@ -480,6 +508,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/GTE-OFFICE_/gte6.webp',
             'assets/Images/Projects/GTE-OFFICE_/gte8.webp',
         ],
+        CategoryId: 7,
         CategoryName: 'Production'
     },
     {
@@ -493,6 +522,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/laMaison_/lamaison3.webp',
             'assets/Images/Projects/laMaison_/lamaison4.webp',
         ],
+        CategoryId: 7,
         CategoryName: 'Production'
     },
     {
@@ -513,6 +543,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/mylo_/mylo10.webp',
             'assets/Images/Projects/mylo_/mylo11.webp',
         ],
+        CategoryId: 7,
         CategoryName: 'Production'
     },
     {
@@ -530,6 +561,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/seashell/seashell7.webp',
 
         ],
+        CategoryId: 7,
         CategoryName: 'Production'
     }
 ];
@@ -542,6 +574,7 @@ ArtProjects.forEach(project => {
 export const ArtCategories: ArtCategory[] = [
     // { Name: 'Commercial', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Commercial') },
     {
+        Id: 1,
         Name: 'Offices and factories',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Offices and factories'),
         ImgSrc: 'assets/Images/Diwan-categories/category-1.webp',
@@ -550,6 +583,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'officesandfactories',
     },
     {
+        Id: 2,
         Name: 'Restaurants',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Restaurants'),
         ImgSrc: 'assets/Images/Diwan-categories/category-2.webp',
@@ -558,6 +592,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'restaurants',
     },
     {
+        Id: 3,
         Name: 'Malls',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Malls'),
         ImgSrc: 'assets/Images/Diwan-categories/category-3.webp',
@@ -566,6 +601,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'malls',
     },
     {
+        Id: 4,
         Name: 'Showrooms',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Showrooms'),
         ImgSrc: 'assets/Images/Diwan-categories/category-4.webp',
@@ -574,6 +610,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'showrooms',
     },
     {
+        Id: 5,
         Name: 'Activation',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activation'),
         ImgSrc: 'assets/Images/Diwan-categories/category-5.webp',
@@ -582,6 +619,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'activation',
     },
     {
+        Id: 6,
         Name: 'Entertainment',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Entertainment'),
         ImgSrc: 'assets/Images/Diwan-categories/category-6.webp',
@@ -590,6 +628,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'entertainment',
     },
     {
+        Id: 7,
         Name: 'Production',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Production'),
         ImgSrc: 'assets/Images/Diwan-categories/category-7.webp',
@@ -598,6 +637,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'production',
     },
     {
+        Id: 8,
         Name: 'World wide',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'worldwide'),
         ImgSrc: 'assets/Images/Diwan-categories/category-8.webp',
@@ -618,6 +658,7 @@ export const MoreArtProjects: ArtProjectItem[] = [
             'assets/Images/More-Projects/fifa.webp',
         ],
         Link: 'artworks/fifa',
+        CategoryId: 8,
     },
     {
         Id: 2,
@@ -627,7 +668,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/eaa.webp',
         ],
-        Link: 'artworks/eaa'
+        Link: 'artworks/eaa',
+        CategoryId: 8,
+
     },
     {
         Id: 3,
@@ -637,7 +680,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/almoosa.webp',
         ],
-        Link: 'artworks/almoosa'
+        Link: 'artworks/almoosa',
+        CategoryId: 8,
+
     },
     {
         Id: 4,
@@ -647,7 +692,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/alrayyan.webp',
         ],
-        Link: 'artworks/alrayyan'
+        Link: 'artworks/alrayyan',
+        CategoryId: 8,
+
     },
     {
         Id: 5,
@@ -657,7 +704,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/meryal.webp',
         ],
-        Link: 'artworks/meryal'
+        Link: 'artworks/meryal',
+        CategoryId: 8,
+
     },
     {
         Id: 6,
@@ -667,7 +716,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/hsbc.webp',
         ],
-        Link: 'artworks/hsbc'
+        Link: 'artworks/hsbc',
+        CategoryId: 8,
+
     },
     {
         Id: 7,
@@ -677,7 +728,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/pubg.webp',
         ],
-        Link: 'artworks/pubg'
+        Link: 'artworks/pubg',
+        CategoryId: 8,
+
     },
     {
         Id: 5,
@@ -687,6 +740,8 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/adidas.webp',
         ],
-        Link: 'artworks/adidas'
+        Link: 'artworks/adidas',
+        CategoryId: 8,
+
     },
 ];
