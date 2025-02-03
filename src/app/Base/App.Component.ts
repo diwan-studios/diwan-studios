@@ -29,7 +29,7 @@ export class AppComponent {
     private title: Title,
     private meta: Meta
   ) {
-    console.log(`browser's language: ${translate.getBrowserLang()}`);
+    // console.log(`browser's language: ${translate.getBrowserLang()}`);
     let browserLang = translate.getBrowserLang()
     translate.setDefaultLang('en');
     translate.use(browserLang ?? 'en');
