@@ -60,14 +60,15 @@ export const ArtProjects: ArtProjectItem[] = [
         Location: 'Egypt',
         Images: [
             'assets/Images/Projects/Money-fellows/moneyfellow.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow1.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow2.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow3.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow4.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow5.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow1.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow2.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow3.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow4.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow5.webp',
             'assets/Images/Projects/Money-fellows/moneyfellow6.webp',
             'assets/Images/Projects/Money-fellows/moneyfellow7.jpg',
-            'assets/Images/Projects/Money-fellows/moneyfellow8.jpg',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow8.jpg',
+            'assets/Images/Projects/Money-fellows/moneyfellow9.webp',
 
         ],
         CategoryName: 'Offices and factories'
@@ -89,7 +90,7 @@ export const ArtProjects: ArtProjectItem[] = [
     },
     {
         Id: 5,
-        Name: 'GTE',
+        Name: 'GTE Travel Solutions Company',
         Description: 'For GTE, a travel solutions company, we created unique artwork to enhance the office environment and maintain a positive, motivating atmosphere. I addition to custom graffiti art, we incorporated acrylic paintings and bespoke wallpaper designs, all reflecting the brand’s dynamic spirit.  combination of vibrant visuals and quality materials helps inspire creativity and energy, transforming the workspace into a lively, welcoming place that  reflects the company’s dedication to innovation and excellent service.',
         Location: 'Egypt',
         Images: [

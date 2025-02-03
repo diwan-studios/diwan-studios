@@ -1,3 +1,4 @@
+import { AppConfig } from '@App/Base/AppConfig';
 import { RoutePaths } from '@App/Common/Settings/RoutePaths';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
@@ -26,10 +27,14 @@ export class LandingCarouselComponent {
     currentIndex = 0;
     Caption = '';
     Intevral!: any;
+    IntervalTime!: number;
 
-    constructor() { }
+    constructor(
+        private AppConfig: AppConfig
+    ) { }
 
     ngOnInit(): void {
+        this.IntervalTime = this.AppConfig.env.IntervalTime;
         this.StartInterval();
     }
 
@@ -52,7 +57,7 @@ export class LandingCarouselComponent {
     }
 
     StartInterval() {
-        this.Intevral = setInterval(() => { this.nextSlide() }, 5000);
+        this.Intevral = setInterval(() => { this.nextSlide() }, this.IntervalTime);
     }
 
     ClearInterval() {
