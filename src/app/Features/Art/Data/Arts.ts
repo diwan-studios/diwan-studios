@@ -311,6 +311,30 @@ export const ArtProjects: ArtProjectItem[] = [
     },
 
     {
+        Id: 20,
+        Name: 'Adidas Mall Of Egypt',
+        Description: `For the Adidas store in Mall of Egypt, we created a design that reflects the powerful fusion of athletic performance and Egyptian culture. Drawing inspiration from the iconic Adidas Ultraboost sneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of  Egyptian heritage and urban life. The mural represents the dynamic energy of both the global Adidas brand and the rich history of Egypt’s streets, showcasing the timeless connection  between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and  through the cultural flow of Egypt’s vibrant urban landscap This project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas  fans and those who appreciate Egypt’s unique artistic and street culture.`,
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG1.webp',
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG2.webp',
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG3.webp',
+        ],
+        CategoryId: 4,
+        CategoryName: 'Showrooms'
+    },
+    {
+        Id: 21,
+        Name: 'Adidas Mall Of Tunisia',
+        Description: `Creating a design that reflects the powerful fusion of athletic performance and Tunisian culture. Drawing inspiration from the iconic Adidas superstarsneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of Tunisia heritage and urban life.The mural represents the dynamic energy of both the global Adidas brand and the rich history of Tunisian streets, showcasing the timeless connection between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and through the cultural flow of Tunisian vibrant urban landscapThis project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas fans and those who appreciate Tunisia unique artistic and street culture.`,
+        Location: 'Tunisia',
+        Images: [
+            'assets/Images/Projects/Adidas_Tunisia/Adidas_Tunisia.webp',
+        ],
+        CategoryId: 4,
+        CategoryName: 'Showrooms'
+    },
+    {
         Id: 18,
         Name: 'ProGuys',
         Description: `For Pro Guys, one of Egypt’s top wrapping and car styling companies, we created murals that showcase their identity and the artistry behind their  work. Each piece highlights the precision and skill that defines Pro Guys’ services, with a final statement wall dedicated to their dream team. This mural not only celebrates their craftsmanship but also reinforces the company’s commitment to excellence, turning their workspace into a visual  representation of their passion and expertise in car styling.`,
@@ -343,30 +367,6 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Seats/seats7.webp',
             'assets/Images/Projects/Seats/seats8.webp',
             'assets/Images/Projects/Seats/seats9.webp',
-        ],
-        CategoryId: 4,
-        CategoryName: 'Showrooms'
-    },
-    {
-        Id: 20,
-        Name: 'Adidas Mall Of Egypt',
-        Description: `For the Adidas store in Mall of Egypt, we created a design that reflects the powerful fusion of athletic performance and Egyptian culture. Drawing inspiration from the iconic Adidas Ultraboost sneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of  Egyptian heritage and urban life. The mural represents the dynamic energy of both the global Adidas brand and the rich history of Egypt’s streets, showcasing the timeless connection  between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and  through the cultural flow of Egypt’s vibrant urban landscap This project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas  fans and those who appreciate Egypt’s unique artistic and street culture.`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG1.webp',
-            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG2.webp',
-            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG3.webp',
-        ],
-        CategoryId: 4,
-        CategoryName: 'Showrooms'
-    },
-    {
-        Id: 21,
-        Name: 'Adidas Mall Of Tunisia',
-        Description: `Creating a design that reflects the powerful fusion of athletic performance and Tunisian culture. Drawing inspiration from the iconic Adidas superstarsneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of Tunisia heritage and urban life.The mural represents the dynamic energy of both the global Adidas brand and the rich history of Tunisian streets, showcasing the timeless connection between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and through the cultural flow of Tunisian vibrant urban landscapThis project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas fans and those who appreciate Tunisia unique artistic and street culture.`,
-        Location: 'Tunisia',
-        Images: [
-            'assets/Images/Projects/Adidas_Tunisia/Adidas_Tunisia.webp',
         ],
         CategoryId: 4,
         CategoryName: 'Showrooms'
@@ -470,10 +470,24 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryId: 6,
         CategoryName: 'Entertainment'
     },
+    {
+        Id: 27,
+        Name: 'Meryal water park',
+        Description: `Dive into the vibrant world of Meryal, Qatar's largest waterpark, where every corner bursts with energy, excitement, and creativity. Covering more than 1,500 square meters of stunning graffiti artwork, Meryal transforms your waterpark adventure into an unforgettable visual journey. At the heart of the park stands The Icon Tower, the world's tallest tower, offering thrills and breathtaking views that reach new heights—literally! Whether you're chasing adrenaline or simply soaking up the artistic vibes, Meryal is where fun meets art in the most spectacular way.`,
+        Location: 'Qatar',
+        Images: [
+            'assets/Images/Projects/meryal/1.webp',
+            'assets/Images/Projects/meryal/2.webp',
+            'assets/Images/Projects/meryal/3.webp',
+            'assets/Images/Projects/meryal/4.webp'
+        ],
+        CategoryId: 6,
+        CategoryName: 'Entertainment'
+    },
 
 
     {
-        Id: 27,
+        Id: 28,
         Name: 'Striker’s Bowling Center',
         Description: `We had the pleasure of transforming the interior of Strikers Bowling Center into a dynamic, high-energy space. Our design approach blended boldness  with creativity to create a memorable experience for visitors. Our contributions included: Neon Work: Eye-catching neon installations that added a vibrant and playful atmosphere, perfectly complementing the lively energy of the bowling  center. Frames Work: Carefully curated and framed artwork that resonated with the center's fun and energetic vibe, adding a personalized touch to various  areas of the venue. Printed Posters: High-quality, visually striking posters that helped reinforce the brand identity and energized the space, ensuring a visually cohesive  and engaging environment. Mega Signage: Large-scale signage that made a bold statement, ensuring easy navigation while elevating the overall aesthetic of the center. The combination of these elements contributed to a fresh, inviting, and exciting environment that perfectly matched the essence of Strikers Bowling  Center, ensuring both functionality and style were seamlessly integrated.`,
         Location: 'Egypt',
@@ -496,37 +510,7 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Production'
     },
     {
-        Id: 28,
-        Name: 'GTE Travel Solutions Company',
-        Description: `We had the privilege of transforming the interior of GTE Traveling Solution Company, creating an atmosphere that reflects the company’s dynamic spirit and commitment to global travel. Our design solutions included: Paintings: Custom artwork that captured the essence of travel and adventure, infusing the space with inspiration and a sense of wanderlust. Acrylic Work: Modern acrylic installations that added depth and sophistication, enhancing the visual appeal and overall ambiance of the office. Wallpaper: Thoughtfully designed wallpaper that complemented the theme of exploration, bringing energy and creativity to various areas while  maintaining a professional and welcoming atmosphere. Our goal was to create a space that inspires both employees and clients, with a design that reflects the passion and excitement of the travel industry.`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/Projects/GTE-OFFICE_/gte2.webp',
-            // 'assets/Images/Projects/GTE-OFFICE_/gte3.webp',
-            'assets/Images/Projects/GTE-OFFICE_/gte4.webp',
-            'assets/Images/Projects/GTE-OFFICE_/gte5.webp',
-            'assets/Images/Projects/GTE-OFFICE_/gte6.webp',
-            'assets/Images/Projects/GTE-OFFICE_/gte8.webp',
-        ],
-        CategoryId: 7,
-        CategoryName: 'Production'
-    },
-    {
         Id: 29,
-        Name: 'La Maison Co-Working Space',
-        Description: `We had the exciting opportunity to transform the interior of La Maison Co-Working Space, blending creativity with functionality. Our contributions  \nincluded:\n Wall Paper: Custom-designed wallpaper that added a modern touch to the space, creating a vibrant and welcoming environment for productivity and  collaboration. Frames Work: Carefully selected and framed artwork that complemented the space’s aesthetic, bringing personality and visual appeal to key areas. Acrylic Work: Sleek, contemporary acrylic installations that added a sophisticated and professional flair, enhancing both visual and spatial dynamics. Door Stickers: Unique door decals that provided clear, functional navigation while enhancing the overall design, adding a seamless flow throughout thw workspace. Our design approach for La Maison reflects our commitment to creating spaces that inspire and energize, with attention to detail in every element to ensure a harmonious atmosphere.`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/Projects/laMaison_/lamaison1.webp',
-            'assets/Images/Projects/laMaison_/lamaison2.webp',
-            'assets/Images/Projects/laMaison_/lamaison3.webp',
-            'assets/Images/Projects/laMaison_/lamaison4.webp',
-        ],
-        CategoryId: 7,
-        CategoryName: 'Production'
-    },
-    {
-        Id: 30,
         Name: 'Mylo',
         Description: `We had the opportunity to transform mylo Office into an inspiring and functional workspace. Our design solutions combined creativity and innovation to create a modern and engaging environment. Our contributions included: Paintings: Custom-designed artworks that added character and energy to the space, aligning with Mylo’s brand identity and fostering a productive  atmosphere. Acrylic Work: Sleek acrylic installations that brought a contemporary edge to the office, enhancing both visual appeal and the overall flow of the space. Wallpaper: Custom wallpaper designs that complemented the office's aesthetic, creating a cohesive and vibrant environment that encouraged creativity and collaboration. Stickers: Unique and functional wall stickers that helped define different zones within the office while adding visual interest to key areas. Frames: Carefully selected and framed art that highlighted Mylo’s brand message, adding style and sophistication to the office environment. Each element was thoughtfully integrated to elevate the overall office experience, creating a space that reflects Mylo’s innovative and dynamic approach to work.`,
         Location: 'Egypt',
@@ -547,23 +531,51 @@ export const ArtProjects: ArtProjectItem[] = [
         CategoryName: 'Production'
     },
     {
+        Id: 30,
+        Name: 'GTE Travel Solutions Company',
+        Description: `We had the privilege of transforming the interior of GTE Traveling Solution Company, creating an atmosphere that reflects the company’s dynamic spirit and commitment to global travel. Our design solutions included: Paintings: Custom artwork that captured the essence of travel and adventure, infusing the space with inspiration and a sense of wanderlust. Acrylic Work: Modern acrylic installations that added depth and sophistication, enhancing the visual appeal and overall ambiance of the office. Wallpaper: Thoughtfully designed wallpaper that complemented the theme of exploration, bringing energy and creativity to various areas while  maintaining a professional and welcoming atmosphere. Our goal was to create a space that inspires both employees and clients, with a design that reflects the passion and excitement of the travel industry.`,
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/Projects/GTE-OFFICE_/gte2.webp',
+            // 'assets/Images/Projects/GTE-OFFICE_/gte3.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte4.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte5.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte6.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte8.webp',
+        ],
+        CategoryId: 7,
+        CategoryName: 'Production'
+    },
+    {
         Id: 31,
         Name: 'Seashell Villa',
-        Description: `At Seashell Villa, we redefined the interior with a fusion of art and elegance. Our team at Diwan Studios enhanced the space through handcrafted acrylic paintings, adding depth and character to every corner. Complementing the artwork, a sleek metal handrail was integrated, bringing a modern  and sophisticated touch to the villa’s aesthetic. This project reflects our commitment to creating harmonious and visually striking spaces, where every detail tells a story of creativity and craftsmanship.`,
+        Description: `At Seashell Villa, we redefined the interior with a fusion of art and elegance. Our team at Diwan Studios enhanced the space through tropical vibrant artwork, adding depth and character to every corner. Complementing the artwork, a sleek metal handrail was integrated, bringing a modern and sophisticated touch to the villa’s aesthetic. This project reflects our commitment to creating harmonious and visually striking spaces, where every detail tells a story of creativity and craftsmanship.`,
         Location: 'Egypt',
         Images: [
             'assets/Images/Projects/seashell/seashell1.webp',
             'assets/Images/Projects/seashell/seashell2.webp',
             'assets/Images/Projects/seashell/seashell3.webp',
             'assets/Images/Projects/seashell/seashell4.webp',
-            'assets/Images/Projects/seashell/seashell5.webp',
-            'assets/Images/Projects/seashell/seashell6.webp',
-            'assets/Images/Projects/seashell/seashell7.webp',
-
+            'assets/Images/Projects/seashell/seashell5.webp'
         ],
         CategoryId: 7,
         CategoryName: 'Production'
-    }
+    },
+    {
+        Id: 32,
+        Name: 'La Maison Co-Working Space',
+        Description: `We had the exciting opportunity to transform the interior of La Maison Co-Working Space, blending creativity with functionality. Our contributions  \nincluded:\n Wall Paper: Custom-designed wallpaper that added a modern touch to the space, creating a vibrant and welcoming environment for productivity and  collaboration. Frames Work: Carefully selected and framed artwork that complemented the space’s aesthetic, bringing personality and visual appeal to key areas. Acrylic Work: Sleek, contemporary acrylic installations that added a sophisticated and professional flair, enhancing both visual and spatial dynamics. Door Stickers: Unique door decals that provided clear, functional navigation while enhancing the overall design, adding a seamless flow throughout thw workspace. Our design approach for La Maison reflects our commitment to creating spaces that inspire and energize, with attention to detail in every element to ensure a harmonious atmosphere.`,
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/Projects/laMaison_/lamaison1.webp',
+            'assets/Images/Projects/laMaison_/lamaison2.webp',
+            'assets/Images/Projects/laMaison_/lamaison3.webp',
+            'assets/Images/Projects/laMaison_/lamaison4.webp',
+        ],
+        CategoryId: 7,
+        CategoryName: 'Production'
+    },
+
 ];
 const regex = /['\s]/g;
 ArtProjects.forEach(project => {
@@ -698,13 +710,13 @@ export const MoreArtProjects: ArtProjectItem[] = [
     },
     {
         Id: 5,
-        Name: 'Meryal Waterpark',
-        Description: `Located on Qetaifan Island North, Meryal Water Park is a haven of adventure and relaxation. We were privileged to design and create an expansive  wall mural covering over 1,500 square meters, blending art and storytelling to enhance the park’s vibrant atmosphere. The mural has transformed Meryal Water Park into an immersive destination where art and recreation meet. Visitors are greeted with a visual  masterpiece that enhances their experience, making the park a must-visit attraction`,
+        Name: 'Adidas Originals',
+        Description: `Bridging the gap between art and the everyday world, this project celebrates the harmony of diverse cultural influences. Tasked with creating a unique masterpiece for Adidas Originals, we combined the finest elements of modern and ancient Egyptian art and architecture to craft a design that is both innovative and timeless. This design stands as a testament to the power of collaboration and cultural storytelling. By uniting Adidas Originals with Amr Diwan’s unique artistry,  we created a piece that not only pays homage to Egypt’s rich history but also resonates with modern audiences worldwide.`,
         Location: 'Egypt',
         Images: [
-            'assets/Images/More-Projects/meryal.webp',
+            'assets/Images/More-Projects/adidas.webp',
         ],
-        Link: 'artworks/meryal',
+        Link: 'artworks/adidas',
         CategoryId: 8,
 
     },
@@ -729,18 +741,6 @@ export const MoreArtProjects: ArtProjectItem[] = [
             'assets/Images/More-Projects/pubg.webp',
         ],
         Link: 'artworks/pubg',
-        CategoryId: 8,
-
-    },
-    {
-        Id: 5,
-        Name: 'Adidas Originals',
-        Description: `Bridging the gap between art and the everyday world, this project celebrates the harmony of diverse cultural influences. Tasked with creating a unique masterpiece for Adidas Originals, we combined the finest elements of modern and ancient Egyptian art and architecture to craft a design that is both innovative and timeless. This design stands as a testament to the power of collaboration and cultural storytelling. By uniting Adidas Originals with Amr Diwan’s unique artistry,  we created a piece that not only pays homage to Egypt’s rich history but also resonates with modern audiences worldwide.`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/More-Projects/adidas.webp',
-        ],
-        Link: 'artworks/adidas',
         CategoryId: 8,
 
     },
