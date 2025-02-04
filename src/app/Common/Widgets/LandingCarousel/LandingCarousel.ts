@@ -1,3 +1,4 @@
+import { AppConfig } from '@App/Base/AppConfig';
 import { RoutePaths } from '@App/Common/Settings/RoutePaths';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
@@ -13,23 +14,27 @@ import { RouterModule } from '@angular/router';
 
 export class LandingCarouselComponent {
     RoutePaths = RoutePaths;
-
+    // strikers yango mylo adidas
     @Input() slides: { image: string; title: string; description: string }[] = [
-        { image: 'assets/Images/landing/7.webp', title: 'Tio Complex', description: '' },//description kjdc jkc jkdn 1
-        { image: 'assets/Images/landing/2.webp', title: 'Lane 9', description: '' },//description kjdc jkc jkdn 2
-        { image: 'assets/Images/landing/6.webp', title: 'Mori Sushi', description: '' },//description kjdc jkc jkdn 6
-        { image: 'assets/Images/landing/4.webp', title: 'Mondelez', description: '' },//description kjdc jkc jkdn 4
-        { image: 'assets/Images/landing/3.webp', title: 'Kansas Burger', description: '' },//description kjdc jkc jkdn 3
-        { image: 'assets/Images/landing/5.webp', title: 'Money Fellows', description: '' },//description kjdc jkc jkdn 5
-        { image: 'assets/Images/landing/1.webp', title: 'Rubix Park', description: '' },//description kjdc jkc jkdn 7
+        { image: 'assets/Images/landing/1.webp', title: '', description: '' },
+        { image: 'assets/Images/landing/2.webp', title: '', description: '' },
+        { image: 'assets/Images/landing/3.webp', title: '', description: '' },
+        { image: 'assets/Images/landing/4.webp', title: '', description: '' },
+        { image: 'assets/Images/landing/5.webp', title: '', description: '' },
+        { image: 'assets/Images/landing/6.webp', title: '', description: '' },
+        { image: 'assets/Images/landing/7.webp', title: '', description: '' },
     ];
     currentIndex = 0;
     Caption = '';
     Intevral!: any;
+    IntervalTime!: number;
 
-    constructor() { }
+    constructor(
+        private AppConfig: AppConfig
+    ) { }
 
     ngOnInit(): void {
+        this.IntervalTime = this.AppConfig.env.IntervalTime;
         this.StartInterval();
     }
 
@@ -52,7 +57,7 @@ export class LandingCarouselComponent {
     }
 
     StartInterval() {
-        this.Intevral = setInterval(() => { this.nextSlide() }, 5000);
+        this.Intevral = setInterval(() => { this.nextSlide() }, this.IntervalTime);
     }
 
     ClearInterval() {

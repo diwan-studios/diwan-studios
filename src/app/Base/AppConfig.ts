@@ -7,6 +7,7 @@ interface Env {
   ApiUrl: string;
   AmrDiwanUrl: string;
   PortfolioLink: string;
+  IntervalTime: number;
 }
 
 @Injectable({ providedIn: 'root' })

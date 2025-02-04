@@ -1,6 +1,7 @@
 import { RoutePaths } from "@App/Common/Settings/RoutePaths";
 
 export class ArtCategory {
+    Id!: number;
     Name!: string;
     ProjectItem!: ArtProjectItem[];
     ImgSrc!: string;
@@ -11,6 +12,7 @@ export class ArtCategory {
 
 export class ArtProjectItem {
     Id!: number;
+    CategoryId!: number;
     Name!: string;
     Description!: string;
     Images!: string[];
@@ -39,6 +41,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/mondelez/mondelez12.webp',
             'assets/Images/Projects/mondelez/mondelez13.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -51,6 +54,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/CAREEM/careem2.webp',
             'assets/Images/Projects/CAREEM/careem3.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -60,16 +64,18 @@ export const ArtProjects: ArtProjectItem[] = [
         Location: 'Egypt',
         Images: [
             'assets/Images/Projects/Money-fellows/moneyfellow.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow1.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow2.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow3.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow4.webp',
-            'assets/Images/Projects/Money-fellows/moneyfellow5.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow1.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow2.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow3.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow4.webp',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow5.webp',
             'assets/Images/Projects/Money-fellows/moneyfellow6.webp',
             'assets/Images/Projects/Money-fellows/moneyfellow7.jpg',
-            'assets/Images/Projects/Money-fellows/moneyfellow8.jpg',
+            // 'assets/Images/Projects/Money-fellows/moneyfellow8.jpg',
+            'assets/Images/Projects/Money-fellows/moneyfellow9.webp',
 
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -85,17 +91,19 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/vq/vq5.webp',
             'assets/Images/Projects/vq/vq6.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
         Id: 5,
-        Name: 'GTE',
+        Name: 'GTE Travel Solutions Company',
         Description: 'For GTE, a travel solutions company, we created unique artwork to enhance the office environment and maintain a positive, motivating atmosphere. I addition to custom graffiti art, we incorporated acrylic paintings and bespoke wallpaper designs, all reflecting the brand’s dynamic spirit.  combination of vibrant visuals and quality materials helps inspire creativity and energy, transforming the workspace into a lively, welcoming place that  reflects the company’s dedication to innovation and excellent service.',
         Location: 'Egypt',
         Images: [
             'assets/Images/Projects/GTE-OFFICE/gte1.webp',
             'assets/Images/Projects/GTE-OFFICE/gte7.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -113,6 +121,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/orange/orange7.webp',
             'assets/Images/Projects/orange/orange8.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
     {
@@ -128,6 +137,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/LaMaison/lamaison5.webp',
             'assets/Images/Projects/LaMaison/lamaison6.webp',
         ],
+        CategoryId: 1,
         CategoryName: 'Offices and factories'
     },
 
@@ -142,6 +152,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/BONITA/bonita3.webp',
             'assets/Images/Projects/BONITA/bonita4.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -163,6 +174,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/taiyaki/taiyaki11.webp',
             'assets/Images/Projects/taiyaki/taiyaki12.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -184,6 +196,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/BUTCHER-BURGER/burcher11.webp',
             'assets/Images/Projects/BUTCHER-BURGER/burcher12.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -203,6 +216,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/kansas/kansas9.webp',
             'assets/Images/Projects/kansas/kansas10.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -220,6 +234,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/MORI-SUSHI/MORI-SUSHI-7.webp',
             'assets/Images/Projects/MORI-SUSHI/MORI-SUSHI-8.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -235,6 +250,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/jj/jj5.jpg',
             'assets/Images/Projects/jj/jj6.jpg',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
     {
@@ -247,6 +263,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/samiha/samiha2.webp',
             'assets/Images/Projects/samiha/samiha3.webp',
         ],
+        CategoryId: 2,
         CategoryName: 'Restaurants'
     },
 
@@ -264,6 +281,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/rubix-park/rubix6.webp',
             'assets/Images/Projects/rubix-park/rubix7.webp',
         ],
+        CategoryId: 3,
         CategoryName: 'Malls'
     },
     {
@@ -288,9 +306,34 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Tio-Complex/TIO-14.webp',
             'assets/Images/Projects/Tio-Complex/TIO-15.webp',
         ],
+        CategoryId: 3,
         CategoryName: 'Malls'
     },
 
+    {
+        Id: 20,
+        Name: 'Adidas Mall Of Egypt',
+        Description: `For the Adidas store in Mall of Egypt, we created a design that reflects the powerful fusion of athletic performance and Egyptian culture. Drawing inspiration from the iconic Adidas Ultraboost sneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of  Egyptian heritage and urban life. The mural represents the dynamic energy of both the global Adidas brand and the rich history of Egypt’s streets, showcasing the timeless connection  between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and  through the cultural flow of Egypt’s vibrant urban landscap This project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas  fans and those who appreciate Egypt’s unique artistic and street culture.`,
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG1.webp',
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG2.webp',
+            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG3.webp',
+        ],
+        CategoryId: 4,
+        CategoryName: 'Showrooms'
+    },
+    {
+        Id: 21,
+        Name: 'Adidas Mall Of Tunisia',
+        Description: `Creating a design that reflects the powerful fusion of athletic performance and Tunisian culture. Drawing inspiration from the iconic Adidas superstarsneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of Tunisia heritage and urban life.The mural represents the dynamic energy of both the global Adidas brand and the rich history of Tunisian streets, showcasing the timeless connection between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and through the cultural flow of Tunisian vibrant urban landscapThis project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas fans and those who appreciate Tunisia unique artistic and street culture.`,
+        Location: 'Tunisia',
+        Images: [
+            'assets/Images/Projects/Adidas_Tunisia/Adidas_Tunisia.webp',
+        ],
+        CategoryId: 4,
+        CategoryName: 'Showrooms'
+    },
     {
         Id: 18,
         Name: 'ProGuys',
@@ -306,6 +349,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Pro-guys/pro7.webp',
             'assets/Images/Projects/Pro-guys/pro8.webp',
         ],
+        CategoryId: 4,
         CategoryName: 'Showrooms'
     },
     {
@@ -324,28 +368,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Seats/seats8.webp',
             'assets/Images/Projects/Seats/seats9.webp',
         ],
-        CategoryName: 'Showrooms'
-    },
-    {
-        Id: 20,
-        Name: 'Adidas Mall Of Egypt',
-        Description: `For the Adidas store in Mall of Egypt, we created a design that reflects the powerful fusion of athletic performance and Egyptian culture. Drawing inspiration from the iconic Adidas Ultraboost sneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of  Egyptian heritage and urban life. The mural represents the dynamic energy of both the global Adidas brand and the rich history of Egypt’s streets, showcasing the timeless connection  between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and  through the cultural flow of Egypt’s vibrant urban landscap This project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas  fans and those who appreciate Egypt’s unique artistic and street culture.`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG1.webp',
-            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG2.webp',
-            'assets/Images/Projects/Adidas_MOEG/Adidas_MOEG3.webp',
-        ],
-        CategoryName: 'Showrooms'
-    },
-    {
-        Id: 21,
-        Name: 'Adidas Mall Of Tunisia',
-        Description: `Creating a design that reflects the powerful fusion of athletic performance and Tunisian culture. Drawing inspiration from the iconic Adidas superstarsneakers, the design captures the essence of modern streetwear, while seamlessly blending elements of Tunisia heritage and urban life.The mural represents the dynamic energy of both the global Adidas brand and the rich history of Tunisian streets, showcasing the timeless connection between fashion, sport, and culture. The energetic vibe of the design speaks to the spirit of movement, both through the physical act of sport and through the cultural flow of Tunisian vibrant urban landscapThis project embodies the unity between global athleticism and local culture, creating an engaging visual experience that resonates with both Adidas fans and those who appreciate Tunisia unique artistic and street culture.`,
-        Location: 'Tunisia',
-        Images: [
-            'assets/Images/Projects/Adidas_Tunisia/Adidas_Tunisia.webp',
-        ],
+        CategoryId: 4,
         CategoryName: 'Showrooms'
     },
 
@@ -359,6 +382,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Opel/opel2.webp',
             'assets/Images/Projects/Opel/opel3.webp',
         ],
+        CategoryId: 5,
         CategoryName: 'Activation'
     },
     {
@@ -372,6 +396,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Yango-Play/yangoplay3.webp',
             'assets/Images/Projects/Yango-Play/yangoplay4.webp',
         ],
+        CategoryId: 5,
         CategoryName: 'Activation'
     },
     {
@@ -383,6 +408,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/Oppo/oppo1.webp',
             'assets/Images/Projects/Oppo/oppo2.webp',
         ],
+        CategoryId: 5,
         CategoryName: 'Activation'
     },
 
@@ -418,6 +444,7 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/strikers/strikers24.webp',
             'assets/Images/Projects/strikers/strikers25.webp',
         ],
+        CategoryId: 6,
         CategoryName: 'Entertainment'
     },
     {
@@ -440,12 +467,27 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/lane9/lane11.webp',
             'assets/Images/Projects/lane9/lane12.webp',
         ],
+        CategoryId: 6,
+        CategoryName: 'Entertainment'
+    },
+    {
+        Id: 27,
+        Name: 'Meryal water park',
+        Description: `Dive into the vibrant world of Meryal, Qatar's largest waterpark, where every corner bursts with energy, excitement, and creativity. Covering more than 1,500 square meters of stunning graffiti artwork, Meryal transforms your waterpark adventure into an unforgettable visual journey. At the heart of the park stands The Icon Tower, the world's tallest tower, offering thrills and breathtaking views that reach new heights—literally! Whether you're chasing adrenaline or simply soaking up the artistic vibes, Meryal is where fun meets art in the most spectacular way.`,
+        Location: 'Qatar',
+        Images: [
+            'assets/Images/Projects/meryal/1.webp',
+            'assets/Images/Projects/meryal/2.webp',
+            'assets/Images/Projects/meryal/3.webp',
+            'assets/Images/Projects/meryal/4.webp'
+        ],
+        CategoryId: 6,
         CategoryName: 'Entertainment'
     },
 
 
     {
-        Id: 27,
+        Id: 28,
         Name: 'Striker’s Bowling Center',
         Description: `We had the pleasure of transforming the interior of Strikers Bowling Center into a dynamic, high-energy space. Our design approach blended boldness  with creativity to create a memorable experience for visitors. Our contributions included: Neon Work: Eye-catching neon installations that added a vibrant and playful atmosphere, perfectly complementing the lively energy of the bowling  center. Frames Work: Carefully curated and framed artwork that resonated with the center's fun and energetic vibe, adding a personalized touch to various  areas of the venue. Printed Posters: High-quality, visually striking posters that helped reinforce the brand identity and energized the space, ensuring a visually cohesive  and engaging environment. Mega Signage: Large-scale signage that made a bold statement, ensuring easy navigation while elevating the overall aesthetic of the center. The combination of these elements contributed to a fresh, inviting, and exciting environment that perfectly matched the essence of Strikers Bowling  Center, ensuring both functionality and style were seamlessly integrated.`,
         Location: 'Egypt',
@@ -464,38 +506,11 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/strikers_/strikers12.webp',
 
         ],
-        CategoryName: 'Production'
-    },
-    {
-        Id: 28,
-        Name: 'GTE Travel Solutions Company',
-        Description: `We had the privilege of transforming the interior of GTE Traveling Solution Company, creating an atmosphere that reflects the company’s dynamic spirit and commitment to global travel. Our design solutions included: Paintings: Custom artwork that captured the essence of travel and adventure, infusing the space with inspiration and a sense of wanderlust. Acrylic Work: Modern acrylic installations that added depth and sophistication, enhancing the visual appeal and overall ambiance of the office. Wallpaper: Thoughtfully designed wallpaper that complemented the theme of exploration, bringing energy and creativity to various areas while  maintaining a professional and welcoming atmosphere. Our goal was to create a space that inspires both employees and clients, with a design that reflects the passion and excitement of the travel industry.`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/Projects/GTE-OFFICE_/gte2.webp',
-            // 'assets/Images/Projects/GTE-OFFICE_/gte3.webp',
-            'assets/Images/Projects/GTE-OFFICE_/gte4.webp',
-            'assets/Images/Projects/GTE-OFFICE_/gte5.webp',
-            'assets/Images/Projects/GTE-OFFICE_/gte6.webp',
-            'assets/Images/Projects/GTE-OFFICE_/gte8.webp',
-        ],
+        CategoryId: 7,
         CategoryName: 'Production'
     },
     {
         Id: 29,
-        Name: 'La Maison Co-Working Space',
-        Description: `We had the exciting opportunity to transform the interior of La Maison Co-Working Space, blending creativity with functionality. Our contributions  \nincluded:\n Wall Paper: Custom-designed wallpaper that added a modern touch to the space, creating a vibrant and welcoming environment for productivity and  collaboration. Frames Work: Carefully selected and framed artwork that complemented the space’s aesthetic, bringing personality and visual appeal to key areas. Acrylic Work: Sleek, contemporary acrylic installations that added a sophisticated and professional flair, enhancing both visual and spatial dynamics. Door Stickers: Unique door decals that provided clear, functional navigation while enhancing the overall design, adding a seamless flow throughout thw workspace. Our design approach for La Maison reflects our commitment to creating spaces that inspire and energize, with attention to detail in every element to ensure a harmonious atmosphere.`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/Projects/laMaison_/lamaison1.webp',
-            'assets/Images/Projects/laMaison_/lamaison2.webp',
-            'assets/Images/Projects/laMaison_/lamaison3.webp',
-            'assets/Images/Projects/laMaison_/lamaison4.webp',
-        ],
-        CategoryName: 'Production'
-    },
-    {
-        Id: 30,
         Name: 'Mylo',
         Description: `We had the opportunity to transform mylo Office into an inspiring and functional workspace. Our design solutions combined creativity and innovation to create a modern and engaging environment. Our contributions included: Paintings: Custom-designed artworks that added character and energy to the space, aligning with Mylo’s brand identity and fostering a productive  atmosphere. Acrylic Work: Sleek acrylic installations that brought a contemporary edge to the office, enhancing both visual appeal and the overall flow of the space. Wallpaper: Custom wallpaper designs that complemented the office's aesthetic, creating a cohesive and vibrant environment that encouraged creativity and collaboration. Stickers: Unique and functional wall stickers that helped define different zones within the office while adding visual interest to key areas. Frames: Carefully selected and framed art that highlighted Mylo’s brand message, adding style and sophistication to the office environment. Each element was thoughtfully integrated to elevate the overall office experience, creating a space that reflects Mylo’s innovative and dynamic approach to work.`,
         Location: 'Egypt',
@@ -512,25 +527,55 @@ export const ArtProjects: ArtProjectItem[] = [
             'assets/Images/Projects/mylo_/mylo10.webp',
             'assets/Images/Projects/mylo_/mylo11.webp',
         ],
+        CategoryId: 7,
+        CategoryName: 'Production'
+    },
+    {
+        Id: 30,
+        Name: 'GTE Travel Solutions Company',
+        Description: `We had the privilege of transforming the interior of GTE Traveling Solution Company, creating an atmosphere that reflects the company’s dynamic spirit and commitment to global travel. Our design solutions included: Paintings: Custom artwork that captured the essence of travel and adventure, infusing the space with inspiration and a sense of wanderlust. Acrylic Work: Modern acrylic installations that added depth and sophistication, enhancing the visual appeal and overall ambiance of the office. Wallpaper: Thoughtfully designed wallpaper that complemented the theme of exploration, bringing energy and creativity to various areas while  maintaining a professional and welcoming atmosphere. Our goal was to create a space that inspires both employees and clients, with a design that reflects the passion and excitement of the travel industry.`,
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/Projects/GTE-OFFICE_/gte2.webp',
+            // 'assets/Images/Projects/GTE-OFFICE_/gte3.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte4.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte5.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte6.webp',
+            'assets/Images/Projects/GTE-OFFICE_/gte8.webp',
+        ],
+        CategoryId: 7,
         CategoryName: 'Production'
     },
     {
         Id: 31,
         Name: 'Seashell Villa',
-        Description: `At Seashell Villa, we redefined the interior with a fusion of art and elegance. Our team at Diwan Studios enhanced the space through handcrafted acrylic paintings, adding depth and character to every corner. Complementing the artwork, a sleek metal handrail was integrated, bringing a modern  and sophisticated touch to the villa’s aesthetic. This project reflects our commitment to creating harmonious and visually striking spaces, where every detail tells a story of creativity and craftsmanship.`,
+        Description: `At Seashell Villa, we redefined the interior with a fusion of art and elegance. Our team at Diwan Studios enhanced the space through tropical vibrant artwork, adding depth and character to every corner. Complementing the artwork, a sleek metal handrail was integrated, bringing a modern and sophisticated touch to the villa’s aesthetic. This project reflects our commitment to creating harmonious and visually striking spaces, where every detail tells a story of creativity and craftsmanship.`,
         Location: 'Egypt',
         Images: [
             'assets/Images/Projects/seashell/seashell1.webp',
             'assets/Images/Projects/seashell/seashell2.webp',
             'assets/Images/Projects/seashell/seashell3.webp',
             'assets/Images/Projects/seashell/seashell4.webp',
-            'assets/Images/Projects/seashell/seashell5.webp',
-            'assets/Images/Projects/seashell/seashell6.webp',
-            'assets/Images/Projects/seashell/seashell7.webp',
-
+            'assets/Images/Projects/seashell/seashell5.webp'
         ],
+        CategoryId: 7,
         CategoryName: 'Production'
-    }
+    },
+    {
+        Id: 32,
+        Name: 'La Maison Co-Working Space',
+        Description: `We had the exciting opportunity to transform the interior of La Maison Co-Working Space, blending creativity with functionality. Our contributions  \nincluded:\n Wall Paper: Custom-designed wallpaper that added a modern touch to the space, creating a vibrant and welcoming environment for productivity and  collaboration. Frames Work: Carefully selected and framed artwork that complemented the space’s aesthetic, bringing personality and visual appeal to key areas. Acrylic Work: Sleek, contemporary acrylic installations that added a sophisticated and professional flair, enhancing both visual and spatial dynamics. Door Stickers: Unique door decals that provided clear, functional navigation while enhancing the overall design, adding a seamless flow throughout thw workspace. Our design approach for La Maison reflects our commitment to creating spaces that inspire and energize, with attention to detail in every element to ensure a harmonious atmosphere.`,
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/Projects/laMaison_/lamaison1.webp',
+            'assets/Images/Projects/laMaison_/lamaison2.webp',
+            'assets/Images/Projects/laMaison_/lamaison3.webp',
+            'assets/Images/Projects/laMaison_/lamaison4.webp',
+        ],
+        CategoryId: 7,
+        CategoryName: 'Production'
+    },
+
 ];
 const regex = /['\s]/g;
 ArtProjects.forEach(project => {
@@ -541,6 +586,7 @@ ArtProjects.forEach(project => {
 export const ArtCategories: ArtCategory[] = [
     // { Name: 'Commercial', ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Commercial') },
     {
+        Id: 1,
         Name: 'Offices and factories',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Offices and factories'),
         ImgSrc: 'assets/Images/Diwan-categories/category-1.webp',
@@ -549,6 +595,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'officesandfactories',
     },
     {
+        Id: 2,
         Name: 'Restaurants',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Restaurants'),
         ImgSrc: 'assets/Images/Diwan-categories/category-2.webp',
@@ -557,6 +604,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'restaurants',
     },
     {
+        Id: 3,
         Name: 'Malls',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Malls'),
         ImgSrc: 'assets/Images/Diwan-categories/category-3.webp',
@@ -565,6 +613,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'malls',
     },
     {
+        Id: 4,
         Name: 'Showrooms',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Showrooms'),
         ImgSrc: 'assets/Images/Diwan-categories/category-4.webp',
@@ -573,6 +622,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'showrooms',
     },
     {
+        Id: 5,
         Name: 'Activation',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Activation'),
         ImgSrc: 'assets/Images/Diwan-categories/category-5.webp',
@@ -581,6 +631,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'activation',
     },
     {
+        Id: 6,
         Name: 'Entertainment',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Entertainment'),
         ImgSrc: 'assets/Images/Diwan-categories/category-6.webp',
@@ -589,6 +640,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'entertainment',
     },
     {
+        Id: 7,
         Name: 'Production',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'Production'),
         ImgSrc: 'assets/Images/Diwan-categories/category-7.webp',
@@ -597,6 +649,7 @@ export const ArtCategories: ArtCategory[] = [
         Link: 'production',
     },
     {
+        Id: 8,
         Name: 'World wide',
         ProjectItem: ArtProjects.filter(p => p.CategoryName == 'worldwide'),
         ImgSrc: 'assets/Images/Diwan-categories/category-8.webp',
@@ -617,6 +670,7 @@ export const MoreArtProjects: ArtProjectItem[] = [
             'assets/Images/More-Projects/fifa.webp',
         ],
         Link: 'artworks/fifa',
+        CategoryId: 8,
     },
     {
         Id: 2,
@@ -626,7 +680,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/eaa.webp',
         ],
-        Link: 'artworks/eaa'
+        Link: 'artworks/eaa',
+        CategoryId: 8,
+
     },
     {
         Id: 3,
@@ -636,7 +692,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/almoosa.webp',
         ],
-        Link: 'artworks/almoosa'
+        Link: 'artworks/almoosa',
+        CategoryId: 8,
+
     },
     {
         Id: 4,
@@ -646,37 +704,9 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/alrayyan.webp',
         ],
-        Link: 'artworks/alrayyan'
-    },
-    {
-        Id: 5,
-        Name: 'Meryal Waterpark',
-        Description: `Located on Qetaifan Island North, Meryal Water Park is a haven of adventure and relaxation. We were privileged to design and create an expansive  wall mural covering over 1,500 square meters, blending art and storytelling to enhance the park’s vibrant atmosphere. The mural has transformed Meryal Water Park into an immersive destination where art and recreation meet. Visitors are greeted with a visual  masterpiece that enhances their experience, making the park a must-visit attraction`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/More-Projects/meryal.webp',
-        ],
-        Link: 'artworks/meryal'
-    },
-    {
-        Id: 6,
-        Name: 'HSBC',
-        Description: `This is from “Vision of Our City” Campaign. The idea of representing each location of HSBC this project we worked on the headquarters in Cairo. In the piece we include pixels and personalities that depict the role of technology and new female-led generation of entrepreneurs. This generation is putting sustainable initiatives first, represented by plants and the shape of the lotus, a symbol of rebirth Where we had the privilege of representing the iconic headquarters in Cairo. This piece is a celebration of the vibrant and evolving identity of our city. We've woven together pixels and personalities that embody the dynamic role  of technology in today's world. But more importantly, this work highlights the rise of a new, female-led generation of entrepreneurs who are reshaping  the future. Sustainability is at the heart of their vision, symbolized through elements like lush plants and the timeless lotus flower—a powerful emblem of rebirth and renewal. It's been an inspiring journey to capture the essence of Cairo, blending tradition with innovation`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/More-Projects/hsbc.webp',
-        ],
-        Link: 'artworks/hsbc'
-    },
-    {
-        Id: 7,
-        Name: 'PUBG Battleground',
-        Description: `In celebration of the epic Vikendi Reborn update in PUBG, we couldn’t resist the opportunity to showcase our passion for the game. Our team brought  the frosty battlegrounds of Vikendi to life with a dynamic illustration for the PS5, combining sleek design with the adrenaline-filled essence of PUBG. This artwork captures the spirit of survival, strategy, and relentless action that defines PUBG, blending iconic elements of the game with a fresh, immersive aesthetic tailored for console gamers.`,
-        Location: 'Egypt',
-        Images: [
-            'assets/Images/More-Projects/pubg.webp',
-        ],
-        Link: 'artworks/pubg'
+        Link: 'artworks/alrayyan',
+        CategoryId: 8,
+
     },
     {
         Id: 5,
@@ -686,6 +716,32 @@ export const MoreArtProjects: ArtProjectItem[] = [
         Images: [
             'assets/Images/More-Projects/adidas.webp',
         ],
-        Link: 'artworks/adidas'
+        Link: 'artworks/adidas',
+        CategoryId: 8,
+
+    },
+    {
+        Id: 6,
+        Name: 'HSBC',
+        Description: `This is from “Vision of Our City” Campaign. The idea of representing each location of HSBC this project we worked on the headquarters in Cairo. In the piece we include pixels and personalities that depict the role of technology and new female-led generation of entrepreneurs. This generation is putting sustainable initiatives first, represented by plants and the shape of the lotus, a symbol of rebirth Where we had the privilege of representing the iconic headquarters in Cairo. This piece is a celebration of the vibrant and evolving identity of our city. We've woven together pixels and personalities that embody the dynamic role  of technology in today's world. But more importantly, this work highlights the rise of a new, female-led generation of entrepreneurs who are reshaping  the future. Sustainability is at the heart of their vision, symbolized through elements like lush plants and the timeless lotus flower—a powerful emblem of rebirth and renewal. It's been an inspiring journey to capture the essence of Cairo, blending tradition with innovation`,
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/More-Projects/hsbc.webp',
+        ],
+        Link: 'artworks/hsbc',
+        CategoryId: 8,
+
+    },
+    {
+        Id: 7,
+        Name: 'PUBG Battleground',
+        Description: `In celebration of the epic Vikendi Reborn update in PUBG, we couldn’t resist the opportunity to showcase our passion for the game. Our team brought  the frosty battlegrounds of Vikendi to life with a dynamic illustration for the PS5, combining sleek design with the adrenaline-filled essence of PUBG. This artwork captures the spirit of survival, strategy, and relentless action that defines PUBG, blending iconic elements of the game with a fresh, immersive aesthetic tailored for console gamers.`,
+        Location: 'Egypt',
+        Images: [
+            'assets/Images/More-Projects/pubg.webp',
+        ],
+        Link: 'artworks/pubg',
+        CategoryId: 8,
+
     },
 ];

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Location } from '@angular/common';
@@ -34,6 +34,11 @@ export class ArtComponent {
 
     category: any;
 
+    @ViewChildren('projectElement') projectElements!: QueryList<ElementRef>;
+    observer: IntersectionObserver | null = null;
+    activeCategoryId: number | null = null;
+    activeProjectId: number | null = null;
+
     constructor(
         private renderer: Renderer2,
         private el: ElementRef,
@@ -50,7 +55,6 @@ export class ArtComponent {
             block: 'start',
         });
         element.style.paddingTop = "50px"
-        this.checkElementsVisibility();
     }
 
     ngAfterViewInit() {
@@ -60,7 +64,7 @@ export class ArtComponent {
             this.project = params['project'];
             this.category = params['category'];
 
-            if (!this.category) { this.checkElementsVisibility(); return }
+            if (!this.category) { return }
             if (!this.project) {
                 const parent = this.el.nativeElement.querySelector(`#${this.category}`)
                 setTimeout(() => {
@@ -69,13 +73,28 @@ export class ArtComponent {
                 return
             }
             const parent = this.el.nativeElement.querySelector(`#${this.category}`)
-            const element = parent.querySelector(`#${this.project}`)
+            const element = parent.querySelector(`.${this.project}`)
             setTimeout(() => {
                 this.scrollTo(element);
             }, 100);
         });
 
         // this.Animation.Arts();
+
+        if (window.innerWidth > 768) {
+            const options = { root: null, threshold: 0.3 };
+
+            this.observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.activeProjectId = +entry.target.id.split('-')[1];
+                        this.activeCategoryId = +entry.target.id.split('-')[3];
+                    }
+                });
+            }, options);
+
+            this.projectElements.forEach(project => this.observer!.observe(project.nativeElement));
+        }
     }
 
     Animation = {
@@ -126,67 +145,6 @@ export class ArtComponent {
         threshold: 0.1,
     };
 
-    private checkElementsVisibility() {
-        const categoryElements = this.el.nativeElement.querySelectorAll('.category');
-
-        categoryElements.forEach((categoryElement: Element) => {
-            const category = categoryElement.getAttribute('id');
-            const rectt = categoryElement.getBoundingClientRect();
-            if (!(rectt.top <= 100 && rectt.bottom > 100)) {
-                if (category != null) {
-                    var button = document.querySelector('[data-bs-target="#' + category + '-collapse"]');
-                    if (button) {
-                        this.renderer.removeStyle(button, 'font-weight');
-                        button?.setAttribute('aria-expanded', 'false');
-                        button?.classList.add('collapsed');
-                    }
-                    const ParentDev = document.querySelector('.collapse#' + category + '-collapse') as HTMLElement;
-                    ParentDev?.classList.remove('show');
-
-                }
-            }
-            const projectElements = categoryElement.querySelectorAll('.projects');
-
-            projectElements.forEach((projectElement: Element) => {
-                const project = projectElement.getAttribute('id');
-                const categoryAnchor = this.el.nativeElement.querySelector(`a[data-category="${category + '-' + project}"]`);
-                const rect = projectElement.getBoundingClientRect();
-
-                if (rect.top <= 400 && rect.bottom > 400) {
-                    this.renderer.addClass(categoryAnchor, 'active');
-                    if (category != null) {
-                        var button = document.querySelector('[data-bs-target="#' + category + '-collapse"]');
-                        if (button) {
-                            this.renderer.setStyle(button, 'font-weight', 'bold');
-                            button?.setAttribute('aria-expanded', 'true');
-                            button?.classList.remove('collapsed');
-                        }
-                        const ParentDev = document.querySelector('.collapse#' + category + '-collapse') as HTMLElement;
-                        ParentDev?.classList.add('show');
-
-                    }
-
-                    if (project != null && !this.animatedSections.has(category + '-' + project)) {
-                        const observerprojects = new IntersectionObserver((entries) => {
-                            entries.forEach((entry) => {
-                                if (entry.isIntersecting) {
-                                    const imgFluidElements = projectElement.querySelectorAll('.img');
-                                    observerprojects.disconnect();
-                                    this.animatedSections.add(category + '-' + project);
-                                }
-                            });
-                        }, this.observerOptions);
-
-                        observerprojects.observe(projectElement);
-                    }
-                } else {
-                    this.renderer.removeClass(categoryAnchor, 'active');
-                }
-
-            });
-        });
-    }
-
     Search() {
         debugger
         this.animatedSections.clear();
@@ -218,10 +176,10 @@ export class ArtComponent {
 
     }
 
-    attachClickEventListeners(link: string) {
+    GoToProject(link: string) {
         this.location.go(link);
         const parent = this.el.nativeElement.querySelector(`#${link.split('/')[1]}`);
-        const id = `#${link.split('/')[2]}`;
+        const id = `.${link.split('/')[2]}`;
         const element = parent.querySelector(id);
         this.scrollTo(element);
     }
@@ -230,23 +188,6 @@ export class ArtComponent {
         this.location.go('/artworks/worldwide');
         const element = document.querySelector('#worldwide')!;
         this.scrollTo(element as any);
-
-    }
-
-    ngOnInit(): void {
-        var main = document.querySelector('.main-app');
-        if (main) {
-            main.addEventListener('scroll', this.onScroll.bind(this));
-        }
-    }
-
-    ngOnDestroy(): void {
-        var main = document.querySelector('.main-app');
-        main?.removeEventListener('scroll', this.onScroll.bind(this));
-    }
-
-    onScroll(event: any): void {
-        this.checkElementsVisibility()
     }
 
     //#region images modal and navigating
@@ -285,4 +226,8 @@ export class ArtComponent {
         this.selectedProjectIndex = imageIndex;
     }
     //#endregion
+
+    ngOnDestroy() {
+        this.observer?.disconnect();
+    }
 }

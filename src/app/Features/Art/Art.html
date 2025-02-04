@@ -16,21 +16,23 @@
 			<ul *ngIf="i!=7" class="list-unstyled m-0 ps-0">
 				<li class="categorymenu">
 					<button
-						class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed gold-text"
+						class="btn btn-toggle d-inline-flex align-items-center rounded border-0 gold-text"
+						[ngClass]="{'collapsed': category.Id != activeCategoryId}"
 						data-bs-toggle="collapse"
-						[attr.data-bs-target]="'#' + category.Name.replace(regex,'').trim().toLowerCase() + '-collapse'"
-						aria-expanded="false">
+						[attr.data-bs-target]="'#collapse-' + category.Id"
+						[attr.aria-expanded]="category.Id == activeCategoryId">
 						<img src="assets/Logos/arrowExpand.png" />
 						{{category.Name}}
 					</button>
-					<div class="collapse project-list" [attr.id]="category.Name.replace(regex,'').trim().toLowerCase() 	+ '-collapse'">
+					<div class="collapse project-list" [attr.id]="'collapse-' + category.Id" [ngClass]="{'show': category.Id == activeCategoryId}">
 						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" *ngFor="let project of category.ProjectItem;let i = index">
 							<!-- <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li> -->
 							<li>
 								<a
-									(click)="attachClickEventListeners(project.Link!)"
+									(click)="GoToProject(project.Link!)"
 									href="javascript:void(0)"
-									class="active gold-text nav-link px-0"
+									class="gold-text nav-link px-0"
+									[ngClass]="{'active': project.Id == activeProjectId}"
 									id="categories"
 									[attr.data-category]="category.Name.replace(regex,'').trim().toLowerCase()+'-'+project.Name.replace(regex,'').trim().toLowerCase()">
 									{{project.Name}}
@@ -63,7 +65,12 @@
 	<div class="page-section art-div">
 		<ng-container *ngFor="let category of Categories;let i = index">
 			<div class="category" *ngIf="i!=7" [id]="category.Name.replace(regex, '').trim().toLowerCase()">
-				<div *ngFor="let project of category.ProjectItem" class="projects" [id]="project.Name.replace(regex, '').trim().toLowerCase()">
+				<div
+					#projectElement
+					*ngFor="let project of category.ProjectItem"
+					class="projects"
+					[ngClass]="project.Name.replace(regex, '').trim().toLowerCase()"
+					[id]="'project-' + project.Id + '-category-' + project.CategoryId">
 					<h1 class="title gold-text">{{project.Name}}</h1>
 					<p class="sub-title">{{project.Description}}</p>
 					<div class="images">
@@ -79,10 +86,12 @@
 			<p class="sub-title">For More Projects By Amr Diwan</p>
 			<div class="images" [id]="'worldwide'">
 				<a
+					#projectElement
 					*ngFor="let project of MoreProjects; let i = index"
 					class="hoverable-img-item"
 					[href]="AppConfig.env.AmrDiwanUrl + project.Link"
-					target="_blank">
+					target="_blank"
+					[id]="'project-' + project.Id + '-category-' + project.CategoryId">
 					<img class="img" [src]="project.Images[0]" alt="project display image" />
 					<div class="visible">{{project.Name}}</div>
 				</a>
