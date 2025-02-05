@@ -414,7 +414,7 @@ export const ArtProjects: ArtProjectItem[] = [
 
     {
         Id: 25,
-        Name: 'Striker’s Bowling Center',
+        Name: `Striker's Bowling Center`,
         Description: `For Strikers Bowling Center, we had the opportunity to completely transform the interior of the space, spanning approximately 700 m², with our  dynamic and bold artwork. Our goal was to create an engaging and energetic environment that enhanced the excitement of the bowling experience. The artwork integrated a mix of normal and fluorescent paints, bringing the space to life with vibrant colors that pop under different lighting conditions. In addition to the murals, we designed and implemented a variety of visual elements including floor graphics, neon signage, posters, frames, and wallpaper. These details worked together to create a cohesive, immersive atmosphere that envelops guests from the moment they enter. This project not only transformed the visual appeal of the center but also contributed to an energized environment, making Strikers Bowling Center a  standout location for entertainment and fun.`,
         Location: 'Egypt',
         Images: [
@@ -488,7 +488,7 @@ export const ArtProjects: ArtProjectItem[] = [
 
     {
         Id: 28,
-        Name: 'Striker’s Bowling Center',
+        Name: `Striker's Bowling Center`,
         Description: `We had the pleasure of transforming the interior of Strikers Bowling Center into a dynamic, high-energy space. Our design approach blended boldness  with creativity to create a memorable experience for visitors. Our contributions included: Neon Work: Eye-catching neon installations that added a vibrant and playful atmosphere, perfectly complementing the lively energy of the bowling  center. Frames Work: Carefully curated and framed artwork that resonated with the center's fun and energetic vibe, adding a personalized touch to various  areas of the venue. Printed Posters: High-quality, visually striking posters that helped reinforce the brand identity and energized the space, ensuring a visually cohesive  and engaging environment. Mega Signage: Large-scale signage that made a bold statement, ensuring easy navigation while elevating the overall aesthetic of the center. The combination of these elements contributed to a fresh, inviting, and exciting environment that perfectly matched the essence of Strikers Bowling  Center, ensuring both functionality and style were seamlessly integrated.`,
         Location: 'Egypt',
         Images: [
@@ -579,7 +579,7 @@ export const ArtProjects: ArtProjectItem[] = [
 ];
 const regex = /['\s]/g;
 ArtProjects.forEach(project => {
-    project.Link = `${RoutePaths.ArtWorks}/${project.CategoryName?.replace('&', 'and').replace(regex, '').toLowerCase().trim()}/${project.Name.replace(regex, '').toLowerCase().trim()}`;
+    project.Link = `/${RoutePaths.ArtWorks}/${project.CategoryName?.replace('&', 'and').replace(regex, '').toLowerCase().trim()}/${project.Name.replace(regex, '').toLowerCase().trim()}`;
 });
 
 

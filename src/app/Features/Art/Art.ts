@@ -178,8 +178,8 @@ export class ArtComponent {
 
     GoToProject(link: string) {
         this.location.go(link);
-        const parent = this.el.nativeElement.querySelector(`#${link.split('/')[1]}`);
-        const id = `.${link.split('/')[2]}`;
+        const parent = this.el.nativeElement.querySelector(`#${link.split('/')[2]}`);
+        const id = `.${link.split('/')[3]}`;
         const element = parent.querySelector(id);
         this.scrollTo(element);
     }
